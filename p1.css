@@ -1,0 +1,245 @@
+/*reset*/
+html{
+    font-size:14px;
+}
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+li{
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+/*nav*/
+#nav {
+    font-family: 'Nunito', sans-serif;
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 100%;
+    background-color: rgba(255,255,255,0);
+}
+#nav h1 {
+    float:left;
+    color:#fff;
+    font-size:28px;
+    padding:5px 5px 5px 15px;
+    letter-spacing: -1px;
+}
+#nav ul {
+    float:right;
+    padding-right: 10px;
+}
+#nav ul li {
+    display: inline;
+    font-size:1rem;
+}
+#nav ul li a {
+    position: relative;
+    display: inline-block;
+    padding: 20px 15px;
+    color: #fff;
+    text-transform: capitalize;
+}
+#nav ul li a:after{
+    content:"";
+    background:#7d1eff;
+    position: absolute;
+    bottom:-1px;
+    left:50%;
+    width:0;
+    height:.15rem;
+    transition: all .3s;
+}
+#nav.on {
+    position: fixed;
+    top:0;
+    background-color: rgba(255,255,255,1);
+    border-bottom: 1px solid rgba( 0,0,0,0.08 );
+}
+#nav.on h1{
+    color: #7d1eff;
+}
+#nav.on ul li a{
+    color:#666;
+}
+#nav.on ul li.active a{
+    color:#7d1eff;
+}
+#nav.on ul li.active a:after{
+    width: 100%;
+    left: 0;
+}
+
+#nav .mNav{
+    display:none;
+    position: absolute;
+    top:7px;
+    right:10px;
+    width:65px;
+    height:45px;
+    cursor:pointer;
+}
+
+/*icon-menu*/
+.icon-wrap {
+    padding-left:10px;
+}
+.icon-wrap .icon, .icon-wrap .icon:before, .icon-wrap .icon:after {
+    width:45px;
+    height:4px;
+    background: #fff;
+}
+#nav.on .icon-wrap .icon, #nav.on .icon-wrap .icon:before, #nav.on .icon-wrap .icon:after {
+    background:#7d1eff;
+}
+.icon-wrap .icon {
+    position: relative;
+    margin-top:20px;
+}
+.icon-wrap .icon:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+
+}
+.icon-wrap .icon:after {
+    content: "";
+    position: absolute;
+    left:0;
+    top:10px;
+}
+
+
+/*contents*/
+#contents {
+    text-align: center;
+    color: #fff;
+}
+#contents > div {
+    height: 100vh;
+    line-height: 100vh;
+}
+#contents > div h2 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 90px;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+#contents > div h2 strong {
+    font-weight: 700;
+    font-style: italic;
+}
+
+/*section*/
+#section1 {
+    background: radial-gradient(ellipse farthest-corner at center top, #f39264 0%, #f2606f 100%);
+}
+#section2 {
+    background: radial-gradient(ellipse farthest-corner at center top, #cbf49a, #1ea623);
+}
+#section3 {
+    background: radial-gradient(ellipse farthest-corner at center top, #ffee75, #ff8930);
+}
+#section4 {
+    background: radial-gradient(ellipse farthest-corner at center bottom, #6beace, #2e9aa4);
+}
+#section5 {
+    background: radial-gradient(ellipse farthest-corner at center bottom, #69d2fb 0%, #20438E 100%);
+}
+#section6 {
+    background: radial-gradient(ellipse farthest-corner at center top, #6cebcf 0%, #38a7aa 100%);
+}
+
+/*text animation*/
+#contents > div h2 {
+    transition: all .6s ease-in-out;
+}
+#section1 h2 {
+    opacity: 0;
+    transform: translate(0, 0);
+}
+#section2 h2 {
+    opacity: 0;
+    transform: translate(0, -20%);
+}
+#section3 h2 {
+    opacity: 0;
+    transform: translate(-20%, 0);
+}
+#section4 h2 {
+    opacity: 0;
+    transform: translate(10%, 0);
+}
+#section5 h2 {
+    opacity: 0;
+    transform: rotate(45deg);
+}
+#section6 h2 {
+    opacity: 0;
+    transform: skew(90deg);
+}
+#contents > div.show h2{
+    transform: none;
+}
+#section1.show h2{
+    opacity: 1;
+}
+#section2.show h2{
+    opacity: 1;
+}
+#section3.show h2{
+    opacity: 1;
+}
+#section4.show h2{
+    opacity: 1;
+}
+#section5.show h2{
+    opacity: 1;
+}
+#section6.show h2{
+    opacity: 1;
+}
+
+@media (max-width: 800px){
+    #nav .menu {
+        display: none;
+    }
+    #nav .mNav {
+        display: block;
+    }
+    #nav{
+        width: 100%;
+    }
+    #nav .menu {
+        float: none;
+        text-align: center;
+        padding-right: 0;
+    }
+    #nav .menu li {
+        background-color: rgba(255,255,255,1);
+        width: 100%;
+        display: inline-block;
+        text-align: left;
+        text-indent: 1rem;
+        border-bottom: 1px solid rgba( 0,0,0,0.08 );
+    }
+    #nav .menu li a{
+        color: #666;
+    }
+    #nav .menu li.active a{
+        color: #7d1eff;
+    }
+    #nav.on .menu li.active a:after{
+        width: 0;
+    }
+    #contents > div h2{
+        font-size: 6vw;
+        font-weight: 300;
+    }
+}
