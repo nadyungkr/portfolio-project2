@@ -2,10 +2,9 @@
 html{
     font-size:14px;
 }
-*{
-    margin:0;
-    padding:0;
+body{
     font-family: 'Noto Sans KR', sans-serif;
+    overflow-x:hidden;
 }
 li{
     list-style: none;
@@ -19,7 +18,7 @@ a {
     font-family: 'Nunito', sans-serif;
     position: absolute;
     left: 0;
-    top: 20px;
+    top: 3vh;
     width: 100%;
     background-color: rgba(255,255,255,0);
 }
@@ -27,7 +26,7 @@ a {
     float:left;
     color:#fff;
     font-size:28px;
-    padding:5px 5px 5px 15px;
+    padding:10px 10px 10px 20px;
     letter-spacing: -1px;
 }
 #nav ul {
@@ -59,7 +58,9 @@ a {
     position: fixed;
     top:0;
     background-color: rgba(255,255,255,1);
-    border-bottom: 1px solid rgba( 0,0,0,0.08 );
+    -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.1);
+    -moz-box-shadow: 0 2px 10px rgba(0,0,0,.1);
+    box-shadow: 0 2px 10px rgba(0,0,0,.1);
 }
 #nav.on h1{
     color: #7d1eff;
