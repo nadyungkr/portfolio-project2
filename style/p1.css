@@ -5,12 +5,32 @@ html{
 body{
     font-family: 'Noto Sans KR', sans-serif;
     overflow-x:hidden;
+    background:#fff;
+    transition: background .6s ease-in;
 }
 li{
     list-style: none;
 }
 a {
     text-decoration: none;
+}
+.color-puff-1{
+    background:rgb(207, 170, 170);
+}
+.color-puff-2{
+    background:rgb(238, 235, 185);
+}
+.color-puff-3{
+    background:rgb(170, 204, 207);
+}
+.color-puff-4{
+    background:rgb(181, 162, 206);
+}
+.color-puff-5{
+    background:rgb(198, 207, 170);
+}
+.color-puff-6{
+    background:rgb(207, 170, 170);
 }
 
 /*nav*/
@@ -46,7 +66,7 @@ a {
 }
 #nav ul li a:after{
     content:"";
-    background:#7d1eff;
+    background:#6C5B7B;
     position: absolute;
     bottom:-1px;
     left:50%;
@@ -57,19 +77,19 @@ a {
 #nav.on {
     position: fixed;
     top:0;
-    background-color: rgba(255,255,255,1);
+    background-color: rgba(255,255,255,.8);
     -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.1);
     -moz-box-shadow: 0 2px 10px rgba(0,0,0,.1);
     box-shadow: 0 2px 10px rgba(0,0,0,.1);
 }
 #nav.on h1{
-    color: #7d1eff;
+    color: #6C5B7B;
 }
 #nav.on ul li a{
     color:#666;
 }
 #nav.on ul li.active a{
-    color:#7d1eff;
+    color:#6C5B7B;
 }
 #nav.on ul li.active a:after{
     width: 100%;
@@ -96,7 +116,7 @@ a {
     background: #fff;
 }
 #nav.on .icon-wrap .icon, #nav.on .icon-wrap .icon:before, #nav.on .icon-wrap .icon:after {
-    background:#7d1eff;
+    background:#6C5B7B;
 }
 .icon-wrap .icon {
     position: relative;
@@ -116,80 +136,46 @@ a {
     top:10px;
 }
 
-
 /*contents*/
 #contents {
     text-align: center;
-    color: #fff;
+    color: #222;
 }
-#contents > div {
-    height: 100vh;
-    line-height: 100vh;
+#contents > .inner > div {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
-#contents > div h2 {
-    font-family: 'Nunito', sans-serif;
+#contents > .inner > div h2 {
     font-size: 90px;
     font-weight: 100;
     text-transform: uppercase;
 }
-#contents > div h2 strong {
+#contents > .inner > div h2 strong {
     font-weight: 700;
     font-style: italic;
 }
 
-/*section*/
-#section1 {
-    background: radial-gradient(ellipse farthest-corner at center top, #f39264 0%, #f2606f 100%);
-}
-#section2 {
-    background: radial-gradient(ellipse farthest-corner at center top, #cbf49a, #1ea623);
-}
-#section3 {
-    background: radial-gradient(ellipse farthest-corner at center top, #ffee75, #ff8930);
-}
-#section4 {
-    background: radial-gradient(ellipse farthest-corner at center bottom, #6beace, #2e9aa4);
-}
-#section5 {
-    background: radial-gradient(ellipse farthest-corner at center bottom, #69d2fb 0%, #20438E 100%);
-}
-#section6 {
-    background: radial-gradient(ellipse farthest-corner at center top, #6cebcf 0%, #38a7aa 100%);
-}
 
 /*text animation*/
-#contents > div h2 {
-    transition: all .6s ease-in-out;
-}
-#section1 h2 {
-    opacity: 0;
-    transform: translate(0, 0);
+#contents .inner h2{
+    transition: all .6s ease-in;
 }
 #section2 h2 {
     opacity: 0;
-    transform: translate(0, -20%);
 }
 #section3 h2 {
     opacity: 0;
-    transform: translate(-20%, 0);
 }
 #section4 h2 {
     opacity: 0;
-    transform: translate(10%, 0);
 }
 #section5 h2 {
     opacity: 0;
-    transform: rotate(45deg);
 }
 #section6 h2 {
     opacity: 0;
-    transform: skew(90deg);
-}
-#contents > div.show h2{
-    transform: none;
-}
-#section1.show h2{
-    opacity: 1;
 }
 #section2.show h2{
     opacity: 1;
@@ -234,7 +220,7 @@ a {
         color: #666;
     }
     #nav .menu li.active a{
-        color: #7d1eff;
+        color: #6C5B7B;
     }
     #nav.on .menu li.active a:after{
         width: 0;

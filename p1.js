@@ -1,5 +1,5 @@
 var nav = $("nav ul li"); //메뉴 버튼
-var cont = $("#contents > div"); //컨텐츠
+var cont = $("#contents > .inner > div"); //컨텐츠
 
 //nav 버튼을 클릭했을 때
 nav.click(function(e){
@@ -13,8 +13,18 @@ nav.click(function(e){
 });
 
 $(window).scroll(function(){
+    var scroll = $(window).scrollTop() + ($(window).height()/3);
+    $('.panel').each(function () {
+        if ($(this).position().top <= scroll && $(this).position().top + $(this).height() > scroll) {
+            $('body').removeClass(function (index, css) {
+                return (css.match(/(^|\s)color-\S+/g) || []).join(' ');
+            });
+            $('body').addClass('color-' + $(this).data('color'));
+        }
+    });
+
     var wScroll = $(this).scrollTop();
-    
+
     if ( wScroll > 50 ) {
         $("#nav").addClass("on");
     } else if ( wScroll == 0 ) {
@@ -47,7 +57,8 @@ $(window).scroll(function(){
     }
     /*text animation*/
     //offset top값보다 조금더 작은 값을 줘서 텍스트가 더 빨리보이게 하기
-    if(wScroll >= cont.eq(0).offset().top){
+    
+    if(wScroll >= cont.eq(0).offset().top - $(window).height()){
         cont.eq(0).addClass("show");
     }
     if(wScroll >= cont.eq(1).offset().top - $(window).height()/4){
@@ -64,9 +75,8 @@ $(window).scroll(function(){
     }
     if(wScroll >= cont.eq(5).offset().top - $(window).height()/4){
         cont.eq(5).addClass("show");
-    }    
+    } 
 });
-
 
 
 /* toggle menu */
