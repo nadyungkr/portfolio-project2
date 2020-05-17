@@ -15,22 +15,22 @@ a {
     text-decoration: none;
 }
 .color-puff-1{
-    background:rgb(207, 170, 170);
+    background:rgba(255, 0, 0, 0.719);
 }
 .color-puff-2{
-    background:rgb(238, 235, 185);
+    background:rgba(255, 255, 0, 0.719);
 }
 .color-puff-3{
-    background:rgb(170, 204, 207);
+    background:rgba(0, 0, 255, 0.719);
 }
 .color-puff-4{
-    background:rgb(181, 162, 206);
+    background:rgba(128, 0, 128, 0.719);
 }
 .color-puff-5{
-    background:rgb(198, 207, 170);
+    background:rgba(0, 128, 0, 0.719);
 }
 .color-puff-6{
-    background:rgb(207, 170, 170);
+    background:rgba(255, 192, 203, 0.719);
 }
 
 /*nav*/
@@ -66,7 +66,7 @@ a {
 }
 #nav ul li a:after{
     content:"";
-    background:#6C5B7B;
+    background:#222;
     position: absolute;
     bottom:-1px;
     left:50%;
@@ -77,19 +77,19 @@ a {
 #nav.on {
     position: fixed;
     top:0;
-    background-color: rgba(255,255,255,.8);
+    background-color: rgba(255,255,255,1);
     -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.1);
     -moz-box-shadow: 0 2px 10px rgba(0,0,0,.1);
     box-shadow: 0 2px 10px rgba(0,0,0,.1);
 }
 #nav.on h1{
-    color: #6C5B7B;
+    color: #222;
 }
 #nav.on ul li a{
-    color:#666;
+    color:rgb(163, 159, 159);
 }
 #nav.on ul li.active a{
-    color:#6C5B7B;
+    color:#222;
 }
 #nav.on ul li.active a:after{
     width: 100%;
@@ -116,7 +116,7 @@ a {
     background: #fff;
 }
 #nav.on .icon-wrap .icon, #nav.on .icon-wrap .icon:before, #nav.on .icon-wrap .icon:after {
-    background:#6C5B7B;
+    background:#222;
 }
 .icon-wrap .icon {
     position: relative;
@@ -139,7 +139,6 @@ a {
 /*contents*/
 #contents {
     text-align: center;
-    color: #222;
 }
 #contents > .inner > div {
     min-height: 100vh;
@@ -148,12 +147,13 @@ a {
     align-items: center;
 }
 #contents > .inner > div h2 {
-    font-size: 90px;
+    font-size: 60px;
     font-weight: 100;
     text-transform: uppercase;
 }
-#contents > .inner > div h2 strong {
-    font-weight: 700;
+#contents > .inner > div h2 span{
+    font-family: 'Alfa Slab One', sans-serif;
+    color: rgb(242, 222, 38);
     font-style: italic;
 }
 
@@ -217,10 +217,10 @@ a {
         border-bottom: 1px solid rgba( 0,0,0,0.08 );
     }
     #nav .menu li a{
-        color: #666;
+        color: rgb(163, 159, 159);
     }
     #nav .menu li.active a{
-        color: #6C5B7B;
+        color: #000;
     }
     #nav.on .menu li.active a:after{
         width: 0;
