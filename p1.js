@@ -64,7 +64,7 @@ $(window).scroll(function(){
     if(wScroll >= cont.eq(1).offset().top - $(window).height()/4){
         cont.eq(1).addClass("show");
     }
-    if(wScroll >= cont.eq(2).offset().top - $(window).height()/6){
+    if(wScroll >= cont.eq(2).offset().top - $(window).height()/4){
         cont.eq(2).addClass("show");
     }
     if(wScroll >= cont.eq(3).offset().top - $(window).height()/4){
