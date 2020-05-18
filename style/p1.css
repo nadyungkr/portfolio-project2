@@ -35,19 +35,22 @@ a {
 
 /*nav*/
 #nav {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Alfa Slab One', sans-serif;
     position: absolute;
     left: 0;
     top: 3vh;
     width: 100%;
     background-color: rgba(255,255,255,0);
+    z-index: 99;
 }
 #nav h1 {
     float:left;
-    color:#fff;
     font-size:28px;
     padding:10px 10px 10px 20px;
     letter-spacing: -1px;
+}
+#nav h1 a{
+    color: rgb(242, 222, 38);
 }
 #nav ul {
     float:right;
@@ -71,7 +74,7 @@ a {
     bottom:-1px;
     left:50%;
     width:0;
-    height:.15rem;
+    height:.18rem;
     transition: all .3s;
 }
 #nav.on {
@@ -82,7 +85,7 @@ a {
     -moz-box-shadow: 0 2px 10px rgba(0,0,0,.1);
     box-shadow: 0 2px 10px rgba(0,0,0,.1);
 }
-#nav.on h1{
+#nav.on h1 a{
     color: #222;
 }
 #nav.on ul li a{
@@ -134,6 +137,79 @@ a {
     position: absolute;
     left:0;
     top:10px;
+}
+
+/*scroll - mouse*/
+.scroll-downs{
+    position: absolute;
+    top: 80vh;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 34px;
+    height: 55px;
+    z-index: 98;
+}
+.mousey{
+    width: 3px;
+    padding: 7px 12px;
+    height: 35px;
+    border-radius: 25px;
+    border: 2px solid rgb(242, 222, 38);
+    box-sizing: content-box;
+}
+.scroller{
+    width: 3px;
+    height: 8px;
+    border-radius: 25%;
+    background-color: rgb(242, 222, 38);
+    animation-name: scroll;
+    animation-duration: 1.2s;
+    animation-timing-function: cubic-bezier(.15, .41, .69, .94);
+    animation-iteration-count: infinite;
+}
+.scroll-downs p {
+    font-family: 'Alfa Slab One', sans-serif;
+    text-indent: -3rem;
+    letter-spacing: 1rem;
+    color: rgb(242, 222, 38);
+    padding:1rem 0;
+}
+@keyframes scroll{
+
+    0%{
+        opacity: 0;
+    }
+    10%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(15px);
+        opacity: 0;
+    }
+
+    @keyframes downup{
+        0% {
+            opacity: 0;
+            transform: translateY(0, 100px);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+    }
+    @keyframes bounce{
+        from,
+        to {
+            margin-bottom: 0;
+            animation-timing-function: ease-out;
+        } 50% {
+            margin-bottom: 8px;
+            animation-timing-function: ease-in;
+        }
+    } 
 }
 
 /*contents*/
