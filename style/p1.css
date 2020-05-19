@@ -200,8 +200,6 @@ a {
     font-size: 4vw;
     text-transform: uppercase;
     margin: 2vw 0;
-}
-#contents > .inner > div h2{
     font-family: 'Alfa Slab One', sans-serif;
     font-style: italic;
 }
@@ -431,13 +429,7 @@ a {
 }
 
 
-/*section4*/
-#contents > .inner > #section4{
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-#contents > .inner > #section4 > h2.purple{
+#contents > .inner > #section5 > h2{
     padding: 1rem 2rem;
     writing-mode: vertical-rl;
 }
