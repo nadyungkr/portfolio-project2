@@ -61,19 +61,19 @@ $(window).scroll(function(){
     if(wScroll >= cont.eq(0).offset().top - $(window).height()){
         cont.eq(0).addClass("show");
     }
-    if(wScroll >= cont.eq(1).offset().top - $(window).height()/4){
+    if(wScroll >= cont.eq(1).offset().top - $(window).height()/3){
         cont.eq(1).addClass("show");
     }
-    if(wScroll >= cont.eq(2).offset().top - $(window).height()/4){
+    if(wScroll >= cont.eq(2).offset().top - $(window).height()/3){
         cont.eq(2).addClass("show");
     }
-    if(wScroll >= cont.eq(3).offset().top - $(window).height()/4){
+    if(wScroll >= cont.eq(3).offset().top - $(window).height()/3){
         cont.eq(3).addClass("show");
     }
-    if(wScroll >= cont.eq(4).offset().top - $(window).height()/4){
+    if(wScroll >= cont.eq(4).offset().top - $(window).height()/3){
         cont.eq(4).addClass("show");
     }
-    if(wScroll >= cont.eq(5).offset().top - $(window).height()/4){
+    if(wScroll >= cont.eq(5).offset().top - $(window).height()/3){
         cont.eq(5).addClass("show");
     } 
 });

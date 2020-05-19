@@ -203,7 +203,6 @@ a {
 }
 #contents > .inner > div h2{
     font-family: 'Alfa Slab One', sans-serif;
-    color: rgb(242, 222, 38);
     font-style: italic;
 }
 
@@ -212,10 +211,10 @@ a {
 #contents .inner div{
     transition: all .6s ease-in;
 }
-#section2 h2, #section2 .about_box {
+#section2 .about_box {
     opacity: 0;
 }
-#section3 h2, #section3 .window-container {
+#section3 .window-container {
     opacity: 0;
 }
 #section4 h2 {
@@ -227,10 +226,10 @@ a {
 #section6 h2 {
     opacity: 0;
 }
-#section2.show h2, #section2.show .about_box{
+#section2.show .about_box{
     opacity: 1;
 }
-#section3.show h2, #section3.show .window-container{
+#section3.show .window-container{
     opacity: 1;
 }
 #section4.show h2{
@@ -286,9 +285,14 @@ a {
 }
 
 /*section3*/
+
+#contents > .inner > #section3 h2{
+    width: 100%;
+}
+
 .window-container {
-    width: 70%;
-    min-height: 60vh;
+    width: 80vw;
+    min-width: 300px;
     border: 8px solid #f1f1f1;
     border-radius: 4px;
 }
@@ -321,8 +325,7 @@ a {
     display: table;
     clear: both;
 }
-  
-/* Three dots */
+
 .window-container .dot {
     margin-top: 4px;
     height: 12px;
@@ -340,7 +343,7 @@ a {
     margin-top: -8px;
     height: 25px;
     color: #666;
-    padding: 5px;
+    padding: 0 10px;
 }
 .window-container .row .right .bar {
     width: 17px;
@@ -349,8 +352,43 @@ a {
     margin: 3px 0;
     display: block;
 }
-.window-content {
-    padding: 10px;
+
+.window-container .main_visual{
+    width: 100%;
+    background: #fff;
+    position: relative;
+}
+
+.window-container .main_visual{
+    content:"";
+    display: block;
+    padding-top: 60%;
+}
+/*
+.window-container .project{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: #666;
+}
+
+#contents > .inner > #section3 > .window-container .project{
+    transition: background-position 10s ease;
+    background-position: 0 0;
+    background-size: 100% auto;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#contents > .inner > #section3 > .window-container:hover .project{
+    background-position: 0 100%;
+}
+*/
+
+.main_visual{
+    width: 
 }
 
 /*section4*/
