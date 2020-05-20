@@ -429,6 +429,8 @@ a {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    outline: 3px solid #fff;
+    overflow: hidden;
 }
 #section5 > h2{
     letter-spacing: -.8vw;
@@ -437,6 +439,23 @@ a {
 }
 #section5 > h2.birth{
     order: 9;
+    animation-name: headline;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+@keyframes headline{
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    25% {
+        transform: translate3d(0, 150%, 0);
+    }
+    50%{
+
+    }
+    100%{
+        
+    }
 }
 
 @media (max-width: 800px){
