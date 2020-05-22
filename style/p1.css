@@ -80,15 +80,16 @@ a {
 #nav.on {
     position: fixed;
     top:0;
-    /*-webkit-box-shadow: 0 2px 10px rgba(0,0,0,.1);
+    -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.1);
     -moz-box-shadow: 0 2px 10px rgba(0,0,0,.1);
-    box-shadow: 0 2px 10px rgba(0,0,0,.1);*/
+    box-shadow: 0 2px 10px rgba(0,0,0,.1);
+    background: rgba(255,255,255,1)
 }
 #nav.on h1 a{
     color: #000;
 }
 #nav.on ul li a{
-    color: #fff;
+    color: #666;
 }
 #nav.on ul li.active a{
     color:#000;
@@ -96,12 +97,6 @@ a {
 #nav.on ul li.active a:after{
     width: 100%;
     left: 0;
-}
-#nav ul li a:hover:after{
-    width: 100%;
-    left: 0;
-    background: #fff;
-    transition: all .8s;
 }
 
 #nav .mNav{
@@ -276,8 +271,8 @@ a {
     }
 }
 .about_box {
-    width: 80%;
-    min-height: 60vh;
+    width: 90vw;
+    min-height: 50vh;
     border: 4px solid #000;
     border-radius: 5px;
     background: white;
@@ -287,28 +282,32 @@ a {
     align-items: center;
 }
 .about_box > div{
-    position: relative;
     display: inline-block;
     border:3px solid #000;
-    width: 20vw;
+    width: 15vw;
     height: 20vw;
     margin-right: 1rem;
     box-shadow: 0 0 0 black;
     transition: all 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.about_box > div:nth-child(5){
+    margin-right: 0;
 }
 .about_box > div:hover{
-    box-shadow: 0.8rem 0.8rem 0 black;
+    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
     transform: translate(-0.4rem, -0.4rem);
 }
 .about_box > div > div{
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    left: 50%;
     background: #000;
-    width: 50%;
-    height: 50%;
+    width: 10vw;
+    height: 10vw;
     border-radius: 50%;
+    transform-style: preserve-3d;
+    transition: all .4s;
 }
 .about_box > div > div:after{
     font-family: 'Alfa Slab One', sans-serif;
@@ -317,10 +316,9 @@ a {
     content: "";
     display: block;
     color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 10vw;
+
 }
 .about_box > div:first-child > div:after{
     content: "HTML5";
@@ -330,6 +328,35 @@ a {
 }
 .about_box > div:nth-child(3) > div:after{
     content: "Javascript";
+}
+.about_box > div:nth-child(4) > div:after{
+    content: "Ps/Ai";
+}
+.about_box > div:nth-child(5) > div:after{
+    content: "XD";
+}
+.about_box > div:hover div {
+    transform: rotateY(180deg);
+    background: #ffd966;
+}
+.about_box > div:hover div:after{
+    transform: rotateY(180deg);
+    color: #000;
+}
+.about_box > div:first-child:hover div:after{
+    content: "90%";
+}
+.about_box > div:nth-child(2):hover div:after{
+    content: "90%";
+}
+.about_box > div:nth-child(3):hover div:after{
+    content: "80%";
+}
+.about_box > div:nth-child(4):hover div:after{
+    content: "80%";
+}
+.about_box > div:nth-child(5):hover div:after{
+    content: "80%";
 }
 /*section3*/
 #section3{
@@ -455,7 +482,7 @@ a {
     outline: 1px solid red;
 }
 .slide_btn .back, .slide_btn .next{
-    border: solid #fff;
+    border: solid rgba(255,255,255,1);
     border-width: 0 1vw 1vw 0;
     display: inline-block;
     padding: 3px;
@@ -469,12 +496,37 @@ a {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
     left: 5vw;
-
+    animation-name: back;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
 }
 .slide_btn .next{
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
     right: 5vw;
+    animation-name: next;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes back{
+    from {
+        left: 5vw;
+        opacity: 1;
+    } to {
+        left: 4.5vw;
+        opacity: .5;
+    }
+}
+@keyframes next{
+    rom {
+        right: 5vw;
+        opacity: 1;
+    } to {
+        right: 4.5vw;
+        opacity: .5;
+    }
 }
 /*section5*/
 
@@ -519,14 +571,19 @@ a {
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+        min-height: 80vh;
     }
     .about_box > div{
-        width: 60vw;
-        height: 20vw;
+        width: 90%;
+        min-height: 20vw;
+        margin-right: 0;
     }
     .about_box > div > div{
-        width: 10vw;
-        height: 10vw;
+        width: 15vw;
+        height: 15vw;
+    }
+    .about_box > div > div:after{
+        line-height: 15vw;
     }
     .window-container .row .left {
         width: 20%;
