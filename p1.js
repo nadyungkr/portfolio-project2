@@ -106,6 +106,11 @@ $(document).ready(function(){
                 left:'+=100%'
             });
             img_position--;
+        } else if(img_position = 1){
+            imgs.animate({
+                left:'-=300%'
+            });
+            img_position = img_count;
         }
     }
     function next(){
@@ -114,9 +119,51 @@ $(document).ready(function(){
                 left:'-=100%'
             });
             img_position++;
+        } else if(img_position == img_count){
+            imgs.animate({
+                left:'+=300%'
+            });
+            img_position = 1;
         }
     }
 });
+var headLine = new Array();
+
+headLine[0] = "I COULD BE RED.  ";
+headLine[1] = "PUBLISHER PARK ";
+headLine[2] = "25 HYEONJEONG. ";
+var i = 0;
+var j = 0;
+var speed = 150;
+var check = true;
+
+window.onload = typing();
+
+function typing()
+{
+
+   if(i <= headLine[j].length + 10) //시간 지연 주기 위해서 10
+    {
+      document.querySelector("#autoType").innerHTML =
+        headLine[j].substring(0,i);
+      
+      if(check) i++;
+      if(!check) i--;
+      
+      setTimeout(typing,speed);
+      
+      if(i == headLine[j].length + 10)
+         check = false;
+
+      if(i == 0){
+         check = true;
+         j++;
+         
+         if(j==3) 
+            j = 0;
+        }
+    }
+}
 
 /*responsive*/
 $(window).resize(function(){
