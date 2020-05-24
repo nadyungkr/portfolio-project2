@@ -182,7 +182,7 @@ a {
 
 /*contents*/
 .inner > div {
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -543,7 +543,7 @@ a {
     }
 }
 /*section4*/
-.iphone, .ipad {
+.iphone{
     color: #fff;
     text-align: center;
     text-shadow: 0 0 0.5em #000;
@@ -558,32 +558,10 @@ a {
     background-position: 50% 100%, center;
     -webkit-transform-origin: bottom center;
             transform-origin: bottom center;
-}
-
-.ipad {
-    margin-left: 2em;
-    height: 60vmin;
-    width: 41.9vmin;
-    line-height: 60vmin;
-    border-width: 3vmin;
-    border-radius: 4.2vmin;
-    background-image: url(../images/procello.png);
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    cursor: pointer;
-    transition: background-position 10s linear;
-}
-.ipad:hover{
-    background-position: 100% 100%;
-}
-
-/*section5*/
-.iphone {
-    width: 25vmin;
-    height: 54.133vmin;
-    border-width: 1.5vmin;
-    border-radius: 4vmin;
+    width: 17.49vw;
+    height: 38vw;
+    border-width: 1vw;
+    border-radius: 4vw;
     overflow:hidden;
 }
 #myVideo {
@@ -596,13 +574,30 @@ a {
     src: url("https://acupoftee.github.io/fonts/Clip.ttf");
 }
 #section6{
+    position: relative;
+}
+
+#section6 section{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top:0;
+    left:0;
+    bottom: 0;
+    right:0;
     background-image: linear-gradient(335deg, black 23px, transparent 23px),
       linear-gradient(155deg, black 23px, transparent 23px),
       linear-gradient(335deg, black 23px, transparent 23px),
       linear-gradient(155deg, black 23px, transparent 23px);
     background-size: 58px 58px;
     background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
-} 
+    opacity: 0;
+    transition: all 2s;
+}
+#section6 section.live{
+    opacity:1;
+}
+
 .sign {
     background-image: radial-gradient(
         ellipse 50% 35% at 50% 50%,
@@ -619,7 +614,6 @@ a {
         0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
     animation: shine 2s forwards, flicker 3s infinite;
 }
-
 @keyframes blink {
     0%,
     22%,
@@ -854,6 +848,12 @@ a {
       
     .window-container .row .middle {
         width: 60%;
+    }
+    .iphone{
+        width: 55.248vw;
+        height: 120vw;
+        border-width: 3vw;
+        border-radius: 10vw;
     }
 }
 

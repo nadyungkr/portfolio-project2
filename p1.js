@@ -1,5 +1,6 @@
 var nav = $("nav ul li"); //메뉴 버튼
 var cont = $("#contents > .inner > div"); //컨텐츠
+var bricks = $("#section6 > section");
 
 //nav 버튼을 클릭했을 때
 nav.click(function(e){
@@ -75,7 +76,12 @@ $(window).scroll(function(){
     }
     if(wScroll >= cont.eq(5).offset().top - $(window).height()/3){
         cont.eq(5).addClass("show");
-    } 
+    }
+    if(wScroll == cont.eq(5).offset().top){
+        bricks.addClass("live");
+    } else if(wScroll != cont.eq(5).offset().top){
+        bricks.removeClass("live");
+    }
 });
 
 
