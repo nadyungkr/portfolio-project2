@@ -470,7 +470,7 @@ a {
     float: left;
     background-position: 0 0;
     background-size: cover;
-    transition: background-position 10s ease-in;
+    transition: background-position 16s linear;
 }
 .window-container:hover .visual_container li{
     background-position: 0 100%;
@@ -481,11 +481,11 @@ a {
 }
 .visual_container li:nth-child(2){
     background-image: url('http://puiux.kr/images/mnhimg.png');
-    transition: background-position 6s ease-in;
+    transition: background-position 8s linear;
 }
 .visual_container li:nth-child(3){
     background-image: url('http://puiux.kr/images/datimg.png');
-    transition: background-position 8s ease-in;
+    transition: background-position 12s linear;
 }
 .visual_container li:last-child{
     background-image: url('http://puiux.kr/images/celloimg.png');
@@ -544,7 +544,6 @@ a {
 }
 /*section4*/
 .iphone, .ipad {
-    display: inline-block;
     color: #fff;
     text-align: center;
     text-shadow: 0 0 0.5em #000;
@@ -573,7 +572,7 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     cursor: pointer;
-    transition: all 6s;
+    transition: background-position 10s linear;
 }
 .ipad:hover{
     background-position: 100% 100%;
@@ -581,13 +580,16 @@ a {
 
 /*section5*/
 .iphone {
-    width: 23vmin;
-    height: 51vmin;
-    line-height: 51vmin;
+    width: 25vmin;
+    height: 54.133vmin;
     border-width: 1.5vmin;
     border-radius: 4vmin;
+    overflow:hidden;
 }
-
+#myVideo {
+   width: 100%; 
+   height: 100%;
+}
 /*section6*/
 @font-face {
     font-family: Clip;
