@@ -466,56 +466,51 @@ a {
     -webkit-animation-duration: 40s;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-iteration-count: linear;
-    -webkit-animation-delay: 1s;
     animation-name: visual;
     animation-duration: 40s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    animation-delay: 1s;
 }
 .visual_container li:first-child{
-    background-image: url('http://puiux.kr/images/lolimg.png');
-}
-.visual_container li:nth-child(2){
-    background-image: url('http://puiux.kr/images/mnhimg.png');
-}
-.visual_container li:nth-child(3){
-    background-image: url('http://puiux.kr/images/datimg.png');
-}
-.visual_container li:last-child{
     background-image: url('http://puiux.kr/images/celloimg.png');
 }
-/*fading*/
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
+.visual_container li:nth-child(2){
+    background-image: url('http://puiux.kr/images/datimg.png');
 }
-
-@-webkit-keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
+.visual_container li:nth-child(3){
+    background-image: url('http://puiux.kr/images/mnhimg.png');
+    -webkit-animation-duration: 28s;
+    animation-duration: 28s;
 }
-  
-@keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
+.visual_container li:last-child{
+    background-image: url('http://puiux.kr/images/lolimg.png');
 }
 /*sliding*/
 @-webkit-keyframes visual{
-    from{
+    0%{
+        opacity: .4;
+    }
+    1%{
+        opacity: 1;
+    }
+    5%{
         background-position: 0 0;
     }
-    to{
+    100%{
         background-position: 100% 100%;
     }
 }
 @keyframes visual{
-    from{
+    0%{
+        opacity: .4;
+    }
+    1%{
+        opacity: 1;
+    }
+    5%{
         background-position: 0 0;
     }
-    to{
+    100%{
         background-position: 100% 100%;
     }
 }
