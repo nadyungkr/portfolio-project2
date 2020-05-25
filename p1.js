@@ -1,6 +1,7 @@
 var nav = $("nav ul li"); //메뉴 버튼
 var cont = $("#contents > .inner > div"); //컨텐츠
 var bricks = $("#section6 > section");
+var imgsLi = $('.main_visual > .visual_container > li');
 
 //nav 버튼을 클릭했을 때
 nav.click(function(e){
@@ -67,6 +68,7 @@ $(window).scroll(function(){
     }
     if(wScroll >= cont.eq(2).offset().top - $(window).height()/3){
         cont.eq(2).addClass("show");
+        imgsLi.eq(0).addClass("run-animation");
     }
     if(wScroll >= cont.eq(3).offset().top - $(window).height()/3){
         cont.eq(3).addClass("show");
@@ -84,55 +86,30 @@ $(window).scroll(function(){
     }
 });
 
-
 /* toggle menu */
 $('.mNav').click(function(){
     $('.menu').toggle();
 });
 
 /*image-slide blue section*/
-$(document).ready(function(){
-    var imgs;
-    var img_count;
-    var img_position = 1;
+var slideIndex = 1;
+showSlides(slideIndex);
 
-    imgs = $('.main_visual > .visual_container');
-    img_count = imgs.children().length;
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-    $('.back').click(function(){
-        back();
-    })
-    $('.next').click(function(){
-        next();
-    })
-    
-    function back(){
-        if(1<img_position){
-            imgs.animate({
-                left:'+=100%'
-            });
-            img_position--;
-        } else if(img_position = 1){
-            imgs.animate({
-                left:'-=300%'
-            });
-            img_position = img_count;
-        }
-    }
-    function next(){
-        if(img_count>img_position){
-            imgs.animate({
-                left:'-=100%'
-            });
-            img_position++;
-        } else if(img_position == img_count){
-            imgs.animate({
-                left:'+=300%'
-            });
-            img_position = 1;
-        }
-    }
-});
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  slides[slideIndex-1].style.display = "block"; 
+}
+
 var headLine = new Array();
 
 headLine[0] = "I COULD BE RED.  ";
@@ -156,7 +133,7 @@ function typing()
       if(check) i++;
       if(!check) i--;
       
-      setTimeout(typing,speed);
+      setTimeout(typing, speed);
       
       if(i == headLine[j].length + 10)
          check = false;

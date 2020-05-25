@@ -372,46 +372,42 @@ a {
 .about_box > div:nth-child(5):hover div:after{
     content: "80%";
 }
+
+
 /*section3*/
 #section3{
     position: relative;
 }
-
 .window-container {
+    position: relative;
+    z-index: 98;
     width: 70vw;
     min-width: 300px;
     cursor: pointer;
 }
-
 .window-container .row {
     padding: 10px;
     background: #f1f1f1;
     border-top-left-radius: 1px;
     border-top-right-radius: 1px;
 }
-  
 .window-container .row .column {
     float: left;
 }
-  
 .window-container .row .left {
     width: 10%;
 }
-  
 .window-container .row .right {
     width: 10%;
-}
-  
+} 
 .window-container .row .middle {
     width: 80%;
 }
-
 .window-container .row:after {
     content: "";
     display: table;
     clear: both;
 }
-
 .window-container .dot {
     margin-top: 4px;
     height: 12px;
@@ -438,7 +434,6 @@ a {
     margin: 3px 0;
     display: block;
 }
-
 .window-container .main_visual{
     box-sizing: border-box;
     width: 100%;
@@ -448,14 +443,12 @@ a {
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
 }
-
 .main_visual{
     position: relative;
     width: 100%; 
     min-height: 60vh;
     overflow: hidden;
 }
-
 .visual_container{
     width: 400%;
     height: 100%;
@@ -463,39 +456,74 @@ a {
     top:0;
     left:0;
 }
-
 .visual_container li{
     width: 25%;
     height: 100%;
     float: left;
-    background-position: 0 0;
     background-size: cover;
-    transition: background-position 16s linear;
+    display: none;
+    -webkit-animation-name: visual;
+    -webkit-animation-duration: 40s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: linear;
+    -webkit-animation-delay: 1s;
+    animation-name: visual;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 1s;
 }
-.window-container:hover .visual_container li{
-    background-position: 0 100%;
-}
-
 .visual_container li:first-child{
     background-image: url('http://puiux.kr/images/lolimg.png');
 }
 .visual_container li:nth-child(2){
     background-image: url('http://puiux.kr/images/mnhimg.png');
-    transition: background-position 8s linear;
 }
 .visual_container li:nth-child(3){
     background-image: url('http://puiux.kr/images/datimg.png');
-    transition: background-position 12s linear;
 }
 .visual_container li:last-child{
     background-image: url('http://puiux.kr/images/celloimg.png');
 }
+/*fading*/
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+  
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+/*sliding*/
+@-webkit-keyframes visual{
+    from{
+        background-position: 0 0;
+    }
+    to{
+        background-position: 100% 100%;
+    }
+}
+@keyframes visual{
+    from{
+        background-position: 0 0;
+    }
+    to{
+        background-position: 100% 100%;
+    }
+}
 .slide_btn{
     cursor: pointer;
     font-size: 1.4rem;
-    outline: 1px solid red;
 }
-.slide_btn .back, .slide_btn .next{
+.slide_btn .prev, .slide_btn .next{
     border: solid rgba(255,255,255,1);
     border-width: 0 1vw 1vw 0;
     display: inline-block;
@@ -505,12 +533,13 @@ a {
     position: absolute;
     top: 55%;
     transform: translateY(-50%);
+    z-index: 98;
 }
-.slide_btn .back{
+.slide_btn .prev{
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
     left: 5vw;
-    animation-name: back;
+    animation-name: prev;
     animation-timing-function: ease-in-out;
     animation-duration: 1s;
     animation-iteration-count: infinite;
@@ -524,7 +553,7 @@ a {
     animation-duration: 1s;
     animation-iteration-count: infinite;
 }
-@keyframes back{
+@keyframes prev{
     from {
         left: 5vw;
         opacity: 1;
