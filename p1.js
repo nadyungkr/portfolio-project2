@@ -113,8 +113,8 @@ function showSlides(n) {
 var headLine = new Array();
 
 headLine[0] = "I COULD BE RED.  ";
-headLine[1] = "PUBLISHER PARK ";
-headLine[2] = "25 HYEONJEONG. ";
+headLine[1] = "WEB PUBLISHER ";
+headLine[2] = "HYEONJEONG PARK";
 var i = 0;
 var j = 0;
 var speed = 150;

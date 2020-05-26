@@ -462,14 +462,6 @@ a {
     float: left;
     background-size: cover;
     display: none;
-    -webkit-animation-name: visual;
-    -webkit-animation-duration: 40s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-iteration-count: linear;
-    animation-name: visual;
-    animation-duration: 40s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
 }
 .visual_container li:first-child{
     background-image: url('http://puiux.kr/images/celloimg.png');
@@ -484,6 +476,17 @@ a {
 }
 .visual_container li:last-child{
     background-image: url('http://puiux.kr/images/lolimg.png');
+}
+
+#section3.show .visual_container li{
+    -webkit-animation-name: visual;
+    -webkit-animation-duration: 40s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: linear;
+    animation-name: visual;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 /*sliding*/
 @-webkit-keyframes visual{
@@ -567,6 +570,8 @@ a {
    width: 100%; 
    height: 100%;
 }
+/*section5*/
+
 /*section6*/
 @font-face {
     font-family: Clip;
