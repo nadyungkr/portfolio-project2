@@ -80,9 +80,9 @@ $(window).scroll(function(){
         cont.eq(5).addClass("show");
     }
     if(wScroll == cont.eq(5).offset().top){
-        bricks.addClass("live");
+        bricks.addClass("show");
     } else if(wScroll != cont.eq(5).offset().top){
-        bricks.removeClass("live");
+        bricks.removeClass("show");
     }
 });
 
@@ -96,7 +96,7 @@ var slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+    showSlides(slideIndex += n);
 }
 
 function showSlides(n) {
@@ -112,8 +112,8 @@ function showSlides(n) {
 
 var headLine = new Array();
 
-headLine[0] = "I COULD BE RED.  ";
-headLine[1] = "WEB PUBLISHER ";
+headLine[0] = "I COULD BE RED";
+headLine[1] = "WEB PUBLISHER";
 headLine[2] = "HYEONJEONG PARK";
 var i = 0;
 var j = 0;

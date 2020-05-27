@@ -544,6 +544,14 @@ a {
     -webkit-transform: rotate(-45deg);
     right: 5vw;
 }
+.slide_btn .prev:active{
+    transform: rotate(135deg) scale(.8);
+    -webkit-transform: rotate(135deg) scale(.8);
+}
+.slide_btn .next:active{
+    transform: rotate(-45deg) scale(.8);
+    -webkit-transform: rotate(-45deg) scale(.8);
+}
 /*section4*/
 .iphone{
     color: #fff;
@@ -598,7 +606,7 @@ a {
     opacity: 0;
     transition: all 2s;
 }
-#section6 section.live{
+#section6 section.show{
     opacity:1;
 }
 
