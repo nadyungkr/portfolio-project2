@@ -382,7 +382,7 @@ a {
     position: relative;
     z-index: 98;
     width: 70vw;
-    min-width: 300px;
+    min-width: 30vw;
     cursor: pointer;
 }
 .window-container .row {
@@ -579,7 +579,6 @@ a {
    height: 100%;
 }
 /*section5*/
-
 /*section6*/
 @font-face {
     font-family: Clip;

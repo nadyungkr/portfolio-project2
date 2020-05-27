@@ -68,7 +68,6 @@ $(window).scroll(function(){
     }
     if(wScroll >= cont.eq(2).offset().top - $(window).height()/3){
         cont.eq(2).addClass("show");
-        imgsLi.eq(0).addClass("run-animation");
     }
     if(wScroll >= cont.eq(3).offset().top - $(window).height()/3){
         cont.eq(3).addClass("show");
@@ -91,25 +90,7 @@ $('.mNav').click(function(){
     $('.menu').toggle();
 });
 
-/*image-slide blue section*/
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  slides[slideIndex-1].style.display = "block"; 
-}
-
+/*HOME autotype text*/
 var headLine = new Array();
 
 headLine[0] = "I COULD BE RED";
@@ -127,7 +108,7 @@ function typing()
 
    if(i <= headLine[j].length + 10) //시간 지연 주기 위해서 10
     {
-      document.querySelector("#autoType").innerHTML =
+      document.getElementById("autoType").innerHTML =
         headLine[j].substring(0,i);
       
       if(check) i++;
@@ -147,6 +128,27 @@ function typing()
         }
     }
 }
+
+/*image-slide blue section*/
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  slides[slideIndex-1].style.display = "block"; 
+}
+
+/*scroll animation*/
 
 /*responsive*/
 $(window).resize(function(){
