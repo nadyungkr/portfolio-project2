@@ -93,9 +93,9 @@ $('.mNav').click(function(){
 /*HOME autotype text*/
 var headLine = new Array();
 
-headLine[0] = "I COULD BE RED";
-headLine[1] = "WEB PUBLISHER";
-headLine[2] = "HYEONJEONG PARK";
+headLine[0] = "HyeonJeong's Portfolio";
+headLine[1] = "I'm A Web Publisher";
+headLine[2] = "and Go-getter!";
 var i = 0;
 var j = 0;
 var speed = 150;
@@ -106,25 +106,25 @@ window.onload = typing();
 function typing()
 {
 
-   if(i <= headLine[j].length + 10) //시간 지연 주기 위해서 10
-    {
-      document.getElementById("autoType").innerHTML =
+   if(i <= headLine[j].length + 10){
+       //+10 = delay
+        document.getElementById("autoType").innerHTML =
         headLine[j].substring(0,i);
       
-      if(check) i++;
-      if(!check) i--;
+        if(check) i++;
+        if(!check) i--;
       
-      setTimeout(typing, speed);
+        setTimeout(typing, speed);
       
-      if(i == headLine[j].length + 10)
-         check = false;
+        if(i == headLine[j].length + 10)
+            check = false;
 
-      if(i == 0){
-         check = true;
-         j++;
-         
-         if(j==3) 
-            j = 0;
+        if(i == 0){
+            check = true;
+            j++;
+            
+            if(j==3) 
+                j = 0;
         }
     }
 }

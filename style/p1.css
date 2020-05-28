@@ -192,7 +192,6 @@ a {
 .inner > div > h2 {
     color: rgb(242, 222, 38);
     font-size: 4vw;
-    text-transform: uppercase;
     margin: 2vw 0;
     font-family: 'Alfa Slab One', sans-serif;
     font-style: italic;
@@ -364,13 +363,13 @@ a {
     content: "90%";
 }
 .about_box > div:nth-child(3):hover div:after{
-    content: "80%";
+    content: "70%";
 }
 .about_box > div:nth-child(4):hover div:after{
-    content: "80%";
+    content: "70%";
 }
 .about_box > div:nth-child(5):hover div:after{
-    content: "80%";
+    content: "70%";
 }
 
 
