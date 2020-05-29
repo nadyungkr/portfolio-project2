@@ -582,12 +582,13 @@ a {
     width: 80vw;
 }
 .tab {
-    width: inherit;
+    width: 100%;
     overflow: hidden;
     background-color: transparent;
 }
 .tab button {
     width: 25%;
+    min-height: 10vh;
     float: left;
     cursor: pointer;
     padding: 2rem;
@@ -596,11 +597,12 @@ a {
     outline: none;
     border: 0;
     background-color: transparent;
-    background: url(../images/bits.png) center center no-repeat;
+    background: url(../images/bits.png) 50% 50% no-repeat;
     background-size: contain;
 }
-.tab button:hover {
-    background-color: rgba(255,255,255,.4);
+.tab button:hover, .tab button.active{
+    background: url(../images/bits_on.png) 50% 50% no-repeat;
+    background-size: contain;
 }
 .tabcontent {
     width: inherit;
@@ -608,8 +610,10 @@ a {
     display: none;
     padding: 2rem;
     box-sizing: border-box;
-    outline:10px solid red;
+    transition: all 1s ease-in-out;
+    border: 10px solid red;
 }
+/*tab content concept: 1) messenger*/
 /*section6*/
 @font-face {
     font-family: Clip;

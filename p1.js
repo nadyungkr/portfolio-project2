@@ -161,8 +161,6 @@ function tabMenu(evt, aboutNum) {
     document.getElementById(aboutNum).style.display = "block";
     evt.currentTarget.className += " active";
 }
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
 
 /*responsive*/
 $(window).resize(function(){
