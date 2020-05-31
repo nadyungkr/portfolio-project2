@@ -182,7 +182,7 @@ a {
 
 /*contents*/
 .inner > div {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -283,7 +283,7 @@ a {
       background-position: -120px 60px;
     }
 }
-.about_box {
+.skill_box {
     width: 90vw;
     min-height: 50vh;
     border: 4px solid #000;
@@ -294,7 +294,7 @@ a {
     justify-content: space-around;
     align-items: center;
 }
-.about_box > div{
+.skill_box > div{
     display: inline-block;
     border:3px solid #000;
     width: 15vw;
@@ -307,14 +307,14 @@ a {
     align-items: center;
     cursor: pointer;
 }
-.about_box > div:nth-child(5){
+.skill_box > div:nth-child(5){
     margin-right: 0;
 }
-.about_box > div:hover{
+.skill_box > div:hover{
     box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
     transform: translate(-0.4rem, -0.4rem);
 }
-.about_box > div > div{
+.skill_box > div > div{
     background: #000;
     width: 10vw;
     height: 10vw;
@@ -322,7 +322,7 @@ a {
     transform-style: preserve-3d;
     transition: all .4s;
 }
-.about_box > div > div:after{
+.skill_box > div > div:after{
     font-family: 'Alfa Slab One', sans-serif;
     font-style: italic;
     font-size: 1.6vw;
@@ -333,42 +333,42 @@ a {
     line-height: 10vw;
 
 }
-.about_box > div:first-child > div:after{
+.skill_box > div:first-child > div:after{
     content: "HTML5";
 }
-.about_box > div:nth-child(2) > div:after{
+.skill_box > div:nth-child(2) > div:after{
     content: "CSS3";
 }
-.about_box > div:nth-child(3) > div:after{
+.skill_box > div:nth-child(3) > div:after{
     content: "Javascript";
 }
-.about_box > div:nth-child(4) > div:after{
+.skill_box > div:nth-child(4) > div:after{
     content: "Ps/Ai";
 }
-.about_box > div:nth-child(5) > div:after{
+.skill_box > div:nth-child(5) > div:after{
     content: "XD";
 }
-.about_box > div:hover div {
+.skill_box > div:hover div {
     transform: rotateY(180deg);
     background: #ffd966;
 }
-.about_box > div:hover div:after{
+.skill_box > div:hover div:after{
     transform: rotateY(180deg);
     color: #000;
 }
-.about_box > div:first-child:hover div:after{
+.skill_box > div:first-child:hover div:after{
     content: "90%";
 }
-.about_box > div:nth-child(2):hover div:after{
+.skill_box > div:nth-child(2):hover div:after{
     content: "90%";
 }
-.about_box > div:nth-child(3):hover div:after{
+.skill_box > div:nth-child(3):hover div:after{
     content: "70%";
 }
-.about_box > div:nth-child(4):hover div:after{
+.skill_box > div:nth-child(4):hover div:after{
     content: "70%";
 }
-.about_box > div:nth-child(5):hover div:after{
+.skill_box > div:nth-child(5):hover div:after{
     content: "70%";
 }
 
@@ -551,54 +551,86 @@ a {
     transform: rotate(-45deg) scale(.8);
     -webkit-transform: rotate(-45deg) scale(.8);
 }
-/*section4*/
-.iphone{
-    color: #fff;
-    text-align: center;
-    text-shadow: 0 0 0.5em #000;
-    background-color: #000;
-    background-size: auto 200%, cover;
-    border: solid #111;
-    margin-bottom: 2em;
-    -webkit-box-shadow: 0 0.5em 2em 0.2em rgba(0, 0, 0, 0.33), 0 0 0 0.5px #000 inset;
-            box-shadow: 0 0.5em 2em 0.2em rgba(0, 0, 0, 0.33), 0 0 0 0.5px #000 inset;
-    -webkit-transition: all .1s linear, line-height 0s linear;
-    transition: all .1s linear, line-height 0s linear;
-    background-position: 50% 100%, center;
-    -webkit-transform-origin: bottom center;
-            transform-origin: bottom center;
-    width: 17.49vw;
-    height: 38vw;
-    border-width: 1vw;
-    border-radius: 4vw;
-    overflow:hidden;
-}
-#myVideo {
-   width: 100%; 
-   height: 100%;
-}
 /*section5*/
 .messenger{
     width: 90vw;
-    min-height: 80vh;
+    height: 90vh;
     background: rgb(255,255,255);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: .8rem;
 }
 .messenger .m1{
     width: 70%;
-    height: 100%;
-    border-right: 1px solid #bbb;
+    height: 92%;
+    border-right: 1px solid #ddd;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+.messenger .m2{
+    width: 30%;
+    height: 92%;
+    text-align: center;
+}
+.messenger .m3{
+    border-top: 1px solid #ddd;
+    width: 100%;
+    height: 8%;
 }
 .messenger .m1 > div{
     clear: both;
 }
 .messenger .m1 .w1{
-    background: #e6e6e6;
     float:left;
 }
 .messenger .m1 .w2{
-    background: #0181ff;
     float: right;
+}
+.messenger .m1 > .w1 > p, .messenger .m1 > .w2 > p{
+    margin: .5rem 0;
+    padding: .6rem .8rem;
+    border-radius: .5rem;
+}
+.messenger .m1 .w1 > p{
+    background: #e6e6e6;
+}
+.messenger .m1 .w2 > p{
+    background: #0181ff;
     color: rgb(255,255,255);
+}
+.messenger .m2{
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.messenger .m2 div{
+    width: 100%;
+}
+.messenger .m2 div p:first-child{
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+.messenger .m2 h3{
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin: 1rem 0 .5rem;
+}
+.messenger .m2 p{
+    color: #bbb;
+}
+.messenger .m3 input[type=text]{
+    width: 100%;
+    height: 100%;
+    border: 0;
+    outline: none;
+    padding: 0 .8rem;
+    box-sizing: border-box;
 }
 /*section6*/
 @font-face {
@@ -851,23 +883,23 @@ a {
         font-size: 6vw;
         font-weight: 300;
     }
-    .about_box {
+    .skill_box {
         display:flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
         min-height: 80vh;
     }
-    .about_box > div{
+    .skill_box > div{
         width: 90%;
         min-height: 20vw;
         margin-right: 0;
     }
-    .about_box > div > div{
+    .skill_box > div > div{
         width: 15vw;
         height: 15vw;
     }
-    .about_box > div > div:after{
+    .skill_box > div > div:after{
         line-height: 15vw;
     }
     .window-container .row .left {
