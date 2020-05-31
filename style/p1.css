@@ -578,42 +578,28 @@ a {
    height: 100%;
 }
 /*section5*/
-#section5 > div{
-    width: 80vw;
+.messenger{
+    width: 90vw;
+    min-height: 80vh;
+    background: rgb(255,255,255);
 }
-.tab {
-    width: 100%;
-    overflow: hidden;
-    background-color: transparent;
+.messenger .m1{
+    width: 70%;
+    height: 100%;
+    border-right: 1px solid #bbb;
 }
-.tab button {
-    width: 25%;
-    min-height: 10vh;
-    float: left;
-    cursor: pointer;
-    padding: 2rem;
-    transition: all 0.3s;
-    font-size: 1rem;
-    outline: none;
-    border: 0;
-    background-color: transparent;
-    background: url(../images/bits.png) 50% 50% no-repeat;
-    background-size: contain;
+.messenger .m1 > div{
+    clear: both;
 }
-.tab button:hover, .tab button.active{
-    background: url(../images/bits_on.png) 50% 50% no-repeat;
-    background-size: contain;
+.messenger .m1 .w1{
+    background: #e6e6e6;
+    float:left;
 }
-.tabcontent {
-    width: inherit;
-    min-height: 70vh;
-    display: none;
-    padding: 2rem;
-    box-sizing: border-box;
-    transition: all 1s ease-in-out;
-    border: 10px solid red;
+.messenger .m1 .w2{
+    background: #0181ff;
+    float: right;
+    color: rgb(255,255,255);
 }
-/*tab content concept: 1) messenger*/
 /*section6*/
 @font-face {
     font-family: Clip;
