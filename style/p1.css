@@ -613,8 +613,15 @@ a {
     width: 10vw;
     height: 10vw;
     border-radius: 50%;
-    border: 1px solid black;
     margin: 0 auto;
+}
+.messenger .m2 div .park_photo{
+    background: url(../images/webcon.png) no-repeat;
+    background-size: cover;
+}
+.messenger .m2 div .user_photo{
+    background: url(../images/user.png) no-repeat;
+    background-size: cover;
 }
 .messenger .m2 h3{
     font-size: 1.4rem;
