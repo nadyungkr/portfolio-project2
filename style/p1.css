@@ -858,7 +858,7 @@ a {
     }
 }
 
-.sns{
+.sns, .sns a{
     background-image: radial-gradient(
         ellipse 50% 35% at 50% 50%,
         #35186b,
@@ -881,11 +881,24 @@ a {
 }
 
 .sns .flicker {
-    animation:shine_sns 2s forwards, blink_sns 3s 2s infinite;
+    animation: blink_sns 3s;
+    margin-left: 2rem;
+    color: #9092ff;
+    text-shadow: none;
 }
-@keyframes shine_sns{
-    
-}
+
+@keyframes blink_sns {
+        0% {
+            color: #e6f3ff;
+            text-shadow: 0 0 0.6rem #e4f0fb, 0 0 1.5rem #c9caff,
+        -0.2rem 0.1rem 1rem #c9caff, 0.2rem 0.1rem 1rem #c9caff,
+        0 -0.5rem 2rem #9092ff, 0 0.5rem 3rem #9092ff;
+        }
+        100% {
+            color: #9092ff;
+            text-shadow: none;
+        }
+    }
 
 @media (max-width: 800px){
     #nav .menu {
