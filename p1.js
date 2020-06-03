@@ -78,9 +78,9 @@ $(window).scroll(function(){
     if(wScroll >= cont.eq(5).offset().top - $(window).height()/3){
         cont.eq(5).addClass("show");
     }
-    if(wScroll == cont.eq(5).offset().top){
+    if ( wScroll == cont.eq(5).offset().top ){
         bricks.addClass("show");
-    } else if(wScroll != cont.eq(5).offset().top){
+    } else if ( wScroll != cont.eq(5).offset().top ){
         bricks.removeClass("show");
     }
 });
@@ -139,7 +139,7 @@ function plusSlides(n) {
 
 function showSlides(n) {
     var i;
-    var slides = document.getElementsByClassName("mySlides");
+    var slides = document.getElementsByClassName("mySlides");  //li
     if (n > slides.length) {slideIndex = 1}    
     if (n < 1) {slideIndex = slides.length}
     for (i = 0; i < slides.length; i++) {

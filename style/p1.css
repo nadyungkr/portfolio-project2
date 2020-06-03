@@ -371,8 +371,6 @@ a {
 .skill_box > div:nth-child(5):hover div:after{
     content: "70%";
 }
-
-
 /*section3*/
 #section3{
     position: relative;
@@ -382,7 +380,6 @@ a {
     z-index: 98;
     width: 70vw;
     min-width: 30vw;
-    cursor: pointer;
 }
 .window-container .row {
     padding: 10px;
@@ -458,9 +455,9 @@ a {
 .visual_container li{
     width: 25%;
     height: 100%;
-    float: left;
     background-size: cover;
     display: none;
+    position: relative;
 }
 .visual_container li:first-child{
     background-image: url('http://puiux.kr/images/celloimg.png');
@@ -475,6 +472,25 @@ a {
 }
 .visual_container li:last-child{
     background-image: url('http://puiux.kr/images/lolimg.png');
+}
+.go_more{
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+    width: 180px;
+    height: 50px;
+    font-size: 1.2rem;
+    display: block;
+    border: 4px solid rgba(0, 0, 255, 1);
+    color: rgba(0, 0, 255, 1);
+    line-height: 50px;
+    text-align: center;
+    transition: all .6s;
+    background: #fff;
+}
+.go_more:hover{
+    background: rgba(0, 0, 255, 1);
+    color: #fff;
 }
 
 #section3.show .visual_container li{
@@ -516,6 +532,7 @@ a {
         background-position: 100% 100%;
     }
 }
+
 .slide_btn{
     cursor: pointer;
     font-size: 1.4rem;
@@ -617,6 +634,12 @@ a {
     height: 10vw;
     border-radius: 50%;
     margin: 0 auto;
+    transition: all .6s;
+    cursor: pointer;
+    transform: scale(1);
+}
+.messenger .m2 div p:first-child:active{
+    transform: scale(2);
 }
 .messenger .m2 div .park_photo{
     background: url(../images/webcon.png) no-repeat;
@@ -666,13 +689,12 @@ a {
     background-size: 58px 58px;
     background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
     opacity: 0;
-    transition: all 2s;
+    transition: all .8s;
     z-index: 0;
 }
 #section6 section.show{
     opacity:1;
 }
-
 .sign {
     background-image: radial-gradient(
         ellipse 50% 35% at 50% 50%,
@@ -865,7 +887,7 @@ a {
         transparent
     );
     font-family: "Clip";
-    font-size: 2vw;
+    font-size: 2rem;
     text-transform: none;
     cursor: pointer;
     color: #e6f3ff;
@@ -966,11 +988,12 @@ a {
     .window-container .row .middle {
         width: 60%;
     }
-    .iphone{
-        width: 55.248vw;
-        height: 120vw;
-        border-width: 3vw;
-        border-radius: 10vw;
+    .go_more{
+        bottom: 2%;
+        right: 3%;
+    }
+    .sns, .sns a{
+        font-size: 1.6rem;
     }
 }
 
