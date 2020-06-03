@@ -667,6 +667,7 @@ a {
     background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
     opacity: 0;
     transition: all 2s;
+    z-index: 0;
 }
 #section6 section.show{
     opacity:1;
@@ -855,6 +856,35 @@ a {
     to {
         opacity: 1;
     }
+}
+
+.sns{
+    background-image: radial-gradient(
+        ellipse 50% 35% at 50% 50%,
+        #35186b,
+        transparent
+    );
+    font-family: "Clip";
+    font-size: 2vw;
+    text-transform: none;
+    cursor: pointer;
+    color: #e6f3ff;
+    text-shadow: 0 0 0.6rem #e4f0fb, 0 0 1.5rem #c9caff,
+        -0.2rem 0.1rem 1rem #c9caff, 0.2rem 0.1rem 1rem #c9caff,
+        0 -0.5rem 2rem #9092ff, 0 0.5rem 3rem #9092ff;
+    position: relative;
+    z-index: 1;
+}
+
+.sns p{
+    margin: 2rem 0;
+}
+
+.sns .flicker {
+    animation:shine_sns 2s forwards, blink_sns 3s 2s infinite;
+}
+@keyframes shine_sns{
+    
 }
 
 @media (max-width: 800px){
