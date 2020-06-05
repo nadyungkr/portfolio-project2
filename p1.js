@@ -1,7 +1,5 @@
 var nav = $("nav ul li"); //메뉴 버튼
 var cont = $("#contents > .inner > div"); //컨텐츠
-var bricks = $("#section6 > section");
-var imgsLi = $('.main_visual > .visual_container > li');
 
 //nav 버튼을 클릭했을 때
 nav.click(function(e){
@@ -15,16 +13,6 @@ nav.click(function(e){
 });
 
 $(window).scroll(function(){
-    var scroll = $(window).scrollTop() + ($(window).height()/3);
-    $('.panel').each(function () {
-        if ($(this).position().top <= scroll && $(this).position().top + $(this).height() > scroll) {
-            $('body').removeClass(function (index, css) {
-                return (css.match(/(^|\s)color-\S+/g) || []).join(' ');
-            });
-            $('body').addClass('color-' + $(this).data('color'));
-        }
-    });
-
     var wScroll = $(this).scrollTop();
 
     if ( wScroll > 50 ) {
@@ -52,36 +40,6 @@ $(window).scroll(function(){
     if ( wScroll >= cont.eq(4).offset().top - $(window).height()/5){
         nav.removeClass("active");
         nav.eq(4).addClass("active");
-    }
-    if ( wScroll >= cont.eq(5).offset().top - $(window).height()/5){
-        nav.removeClass("active");
-        nav.eq(5).addClass("active");
-    }
-    /*text animation*/
-    //offset top값보다 조금더 작은 값을 줘서 텍스트가 더 빨리보이게 하기
-    
-    if(wScroll >= cont.eq(0).offset().top - $(window).height()){
-        cont.eq(0).addClass("show");
-    }
-    if(wScroll >= cont.eq(1).offset().top - $(window).height()/3){
-        cont.eq(1).addClass("show");
-    }
-    if(wScroll >= cont.eq(2).offset().top - $(window).height()/3){
-        cont.eq(2).addClass("show");
-    }
-    if(wScroll >= cont.eq(3).offset().top - $(window).height()/3){
-        cont.eq(3).addClass("show");
-    }
-    if(wScroll >= cont.eq(4).offset().top - $(window).height()/3){
-        cont.eq(4).addClass("show");
-    }
-    if(wScroll >= cont.eq(5).offset().top - $(window).height()/3){
-        cont.eq(5).addClass("show");
-    }
-    if ( wScroll == cont.eq(5).offset().top ){
-        bricks.addClass("show");
-    } else if ( wScroll != cont.eq(5).offset().top ){
-        bricks.removeClass("show");
     }
 });
 
@@ -127,25 +85,6 @@ function typing()
                 j = 0;
         }
     }
-}
-
-/*image-slide blue section*/
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-
-function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");  //li
-    if (n > slides.length) {slideIndex = 1}    
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
-    slides[slideIndex-1].style.display = "block"; 
 }
 
 /*responsive*/
