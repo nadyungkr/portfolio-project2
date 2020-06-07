@@ -165,18 +165,16 @@ a {
 .inner > div > h2, #autoType {
     color: black;
     font-size: 4vw;
-    text-align: center;
 }
 /*section1*/
 #section1{
-    display: block;
+    justify-content: space-around;
 }
 .balloon{
     position: relative;
     width: 70vw;
     height: 20vh;
     background: #f0dbdb;
-    margin: 10rem auto;
     z-index: 97;
 }
 .balloon::after{
@@ -191,20 +189,9 @@ a {
     border-bottom: 0px solid transparent;
     z-index: 97;
 }
-.balloon::before{
-    position: absolute;
-    top: 10rem;
-    left: 10rem;
-    content: "";
-    width: 70vw;
-    height: 20vh;
-    border: 1rem solid black;
-    z-index: 98;
-    
-}
 #autoType {
-    min-height: 20vh;
     line-height: 20vh;
+    text-align: center;
 }
 #autoType:after{
     content:"|";
