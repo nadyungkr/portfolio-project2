@@ -116,6 +116,7 @@ a {
 }
 /*scroll - mouse*/
 .mousey{
+    outline: 3px solid red;
     width: 5px;
     padding: 7px 12px;
     height: 35px;
@@ -139,7 +140,6 @@ a {
     padding: 1rem 0;
 }
 @keyframes scroll{
-
     0%{
         opacity: 0;
     }
@@ -160,14 +160,51 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    outline: 10px solid red;
 }
-.inner > div > h2 {
+.inner > div > h2, #autoType {
     color: black;
     font-size: 4vw;
+    text-align: center;
 }
 /*section1*/
+#section1{
+    display: block;
+}
+.balloon{
+    position: relative;
+    width: 70vw;
+    height: 20vh;
+    background: #f0dbdb;
+    margin: 10rem auto;
+    z-index: 97;
+}
+.balloon::after{
+    content: "";
+    position: absolute;
+    top: 20vh;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 5vw solid #f0dbdb; 
+    border-left: 5vw solid transparent; 
+    border-right: 5vw solid transparent; 
+    border-bottom: 0px solid transparent;
+    z-index: 97;
+}
+.balloon::before{
+    position: absolute;
+    top: 10rem;
+    left: 10rem;
+    content: "";
+    width: 70vw;
+    height: 20vh;
+    border: 1rem solid black;
+    z-index: 98;
+    
+}
 #autoType {
     min-height: 20vh;
+    line-height: 20vh;
 }
 #autoType:after{
     content:"|";
@@ -186,7 +223,6 @@ a {
 #section2 h2{
     color: #222;
 }
-
 @keyframes movebg {
     from {
       background-position: 0 0;
@@ -562,4 +598,3 @@ a {
         font-size: 1.6rem;
     }
 }
-
