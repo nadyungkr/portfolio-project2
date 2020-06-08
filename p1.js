@@ -48,45 +48,21 @@ $('.mNav').click(function(){
     $('.menu').toggle();
 });
 
-/*HOME autotype text*/
-var headLine = new Array();
+/*skill_box*/
+var acc = document.getElementsByClassName("skill_btn");
+var i;
 
-headLine[0] = "HyeonJeong's Portfolio";
-headLine[1] = "I'm A Web Publisher";
-headLine[2] = "and Go-getter!";
-var i = 0;
-var j = 0;
-var speed = 150;
-var check = true;
-
-window.onload = typing();
-
-function typing()
-{
-
-   if(i <= headLine[j].length + 10){
-       //+10 = delay
-        document.getElementById("autoType").innerHTML =
-        headLine[j].substring(0,i);
-      
-        if(check) i++;
-        if(!check) i--;
-      
-        setTimeout(typing, speed);
-      
-        if(i == headLine[j].length + 10)
-            check = false;
-
-        if(i == 0){
-            check = true;
-            j++;
-            
-            if(j==3) 
-                j = 0;
-        }
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
     }
+  });
 }
-
 /*responsive*/
 $(window).resize(function(){
     var wWidth = $(window).width();

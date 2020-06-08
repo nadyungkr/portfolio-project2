@@ -4,7 +4,7 @@ html{
     font-size:14px;
 }
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
     overflow-x: hidden;
     background: #fff;
 }
@@ -14,6 +14,7 @@ li{
 a {
     text-decoration: none;
 }
+
 /*nav*/
 #nav {
     position: absolute;
@@ -23,10 +24,10 @@ a {
     background-color: rgba(255, 255, 255, 0);
     z-index: 99;
 }
-#nav h1 {
+#nav h1{
     float:left;
-    font-size:28px;
-    padding:10px 10px 10px 20px;
+    font-size: 28px;
+    padding: 10px 10px 10px 20px;
     letter-spacing: -1px;
 }
 #nav h1 a{
@@ -62,9 +63,6 @@ a {
     top:0;
     box-shadow: 0 2px 10px rgba(0,0,0,.1);
     background: rgba(255,255,255,1)
-}
-#nav.on h1 a{
-    color: #000;
 }
 #nav.on ul li a{
     color: #666;
@@ -116,39 +114,39 @@ a {
 }
 /*scroll - mouse*/
 .mousey{
-    outline: 3px solid red;
-    width: 5px;
-    padding: 7px 12px;
-    height: 35px;
-    border-radius: 22px;
+    width: 40px;
+    height: 70px;
+    border-radius: 30px;
     border: 4px solid #000;
     box-sizing: content-box;
     margin: 0 auto;
 }
 .scroller{
-    width: 5px;
-    height: 8px;
-    border-radius: 25%;
+    width: 6px;
+    height: 12px;
+    margin:0 auto;
+    border-radius: 30%;
     background-color: #000;
     animation-name: scroll;
-    animation-duration: 1.2s;
+    animation-duration: 1.6s;
     animation-iteration-count: infinite;
 }
-.scroll-downs p {
-    font-size:1vw;
-    color: #000;
-    padding: 1rem 0;
+.scroll-downs p{
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: .8rem;
+    margin: 1rem 0;
 }
 @keyframes scroll{
     0%{
         opacity: 0;
     }
     10%{
-        transform: translateY(0);
+        transform: translateY(4px);
         opacity: 1;
     }
     100%{
-        transform: translateY(18px);
+        transform: translateY(20px);
         opacity: 0;
     }
 }
@@ -160,7 +158,6 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    outline: 10px solid red;
 }
 .inner > div > h2, #autoType {
     color: black;
@@ -168,147 +165,263 @@ a {
 }
 /*section1*/
 #section1{
-    justify-content: space-around;
-}
-.balloon{
     position: relative;
-    width: 70vw;
-    height: 20vh;
-    background: #f0dbdb;
-    z-index: 97;
+    height: 120vh;
+    justify-content: space-evenly;
+    background-color: #fff;
+    background-image: linear-gradient(90deg, rgba(255, 235, 205, 0.5) 50%, transparent 50%), linear-gradient(rgba(255, 235, 205, 0.5) 50%, transparent 50%);
+    background-size: 50px 50px;
 }
-.balloon::after{
+.post_box{
+    display: flex;
+    flex-flow: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding: 10rem 0;
+    box-sizing: border-box;
+}
+.post-it-note {
+    font-family: 'Comic Neue', cursive;
+    font-size: 8vw;
+    line-height: 15vh;
+    text-align: center;
+    position: relative;
+    width: 15vw;
+    height: 15vh;
+    background: #ffe79f;
+}
+.post-it-note::after {
     content: "";
     position: absolute;
-    top: 20vh;
+    left: 0;
+    bottom: -2vw;
+    right: 2vw;
+    background: #ffe79f;
+    width: calc(100%-2vw);
+    height: 2vw;
+}
+.post-it-note::before {
+    content: "";
+    position: absolute;
+    bottom: -2vw;
+    right: 0;
+    border-top: 2vw solid #ffe185;
+    border-right: 2vw solid transparent;
+    border-left: 2vw solid transparent;
+    border-bottom: 0vw solid transparent;
+}
+.post_1{
+    background: #ffdede;
+    transform: rotate(5deg);
+}
+.post_1::after{
+    background: #ffdede;
+}
+.post_1::before{
+    border-top: 2vw solid #ffc2c2;
+}
+.post_1 p{
+    position: absolute;
+    top: 1vw;
+    left: 1vw;
+    width: 1vw;
+    height: 1vw;
+    background: #fff;
+    border-radius: 50%;
+}
+.post_2{
+    transform: rotate(-5deg);
+}
+.post_3{
+    background: #dcdbf0;
+    transform: rotate(5deg);
+}
+.post_3::after{
+    background: #dcdbf0;
+}
+.post_3::before{
+    border-top: 2vw solid #c3c0f8;
+}
+.post_4{
+    background: #e6d1f5;
+}
+.post_4::after{
+    background: #e6d1f5;
+}
+.post_4::before{
+    border-top: 2vw solid #dab2f7;
+}
+.post_5{
+    transform: rotate(-5deg);
+}
+.post_6{
+    background: #e6d1f5;
+    transform: translateX(2vw) rotate(5deg);
+}
+.post_6::after{
+    background: #e6d1f5;
+}
+.post_6::before{
+    border-top: 2vw solid #dab2f7;
+}
+#Layer_1{
+    position: absolute;
     left: 50%;
-    transform: translateX(-50%);
-    border-top: 5vw solid #f0dbdb; 
-    border-left: 5vw solid transparent; 
-    border-right: 5vw solid transparent; 
-    border-bottom: 0px solid transparent;
-    z-index: 97;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 8vw;
 }
-#autoType {
-    line-height: 20vh;
-    text-align: center;
+.st0{
+    fill:transparent;
+    stroke:#000000;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-miterlimit: 10;
+    stroke-dashoffset: 1000;
+    stroke-dasharray: 1000;
+    stroke-width: 6;
+    animation: draw 4s ease-in infinite;
 }
-#autoType:after{
-    content:"|";
-    animation: cursor .6s infinite;
-    font-style: normal;
-}
-@keyframes cursor{
-    0% {
-        opacity:1;
+@keyframes draw {
+    from {
+      stroke-dashoffset: 1000;
     }
-    100% {
-        opacity:0;
+    to {
+      stroke-dashoffset: 0;
     }
+}
+.fixed_post{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.post_7{
+    width: 8vw;
+    height: 8vw;
+    background: #ffdede;
+    transform: translate(80vw, 30vh);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.post_8{
+    width: 8vw;
+    height: 8vw;
+    background: #ffdede;
+    transform: translate(72vw, 10vh) rotate(20deg);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.post_7 img, .post_8 img{
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    transform: scale(.8);
 }
 /*section2*/
-#section2 h2{
-    color: #222;
-}
-@keyframes movebg {
-    from {
-      background-position: 0 0;
-    }
-  
-    to {
-      background-position: -120px 60px;
-    }
-}
-.skill_box {
-    width: 90vw;
-    min-height: 80vh;
-    border: 4px solid #000;
-    border-radius: 5px;
-    background: white;
-    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
-    display:flex;
-    flex-flow: wrap;
+#section2{
+    min-height: 160vh;
+    background:#ffdede;
     justify-content: space-around;
-    align-items: center;
 }
-.skill_box > div{
-    border: 4px solid #000;
-    width: 25vw;
-    height: 15vw;
-    box-shadow: 0 0 0 black;
-    transition: all 0.2s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+.skill_box{
+    width: 80vw;
+    min-height: 10vh;
+    border-radius: 1rem;
+    background: #fff;
+    margin: 2rem 0;
 }
-.skill_box > div:nth-child(6){
-    margin-right: 0;
-}
-.skill_box > div:hover{
-    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
-    transform: translate(-0.4rem, -0.4rem);
-}
-.skill_box > div > div{
-    background: #000;
-    width: 10vw;
-    height: 10vw;
-    border-radius: 50%;
-    transform-style: preserve-3d;
-    transition: all .4s;
-}
-.skill_box > div > div:after{
-    font-style: italic;
-    font-size: 1.6vw;
-    content: "";
+.skill_box button{
+    font-family: 'Comic Neue', cursive;
+    outline: 0;
+    border: none;
     display: block;
-    color: #fff;
-    text-align: center;
-    line-height: 10vw;
+    width: 100%;
+    background: transparent;
+    line-height: 10vh;
+    cursor: pointer;
+    font-size: 3rem;
+    text-align: start;
+    text-indent: 1vw;
 }
-.skill_box > div:first-child > div:after{
-    content: "HTML5";
+.skill_box .panel{
+    padding: 2rem;
+    display: none;
+    overflow: hidden;
 }
-.skill_box > div:nth-child(2) > div:after{
-    content: "CSS3";
+.skill_box .panel section{
+    background: #fff;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin: 2rem 0;
 }
-.skill_box > div:nth-child(3) > div:after{
-    content: "Javascript";
+.panel section h3{
+    font-size: 1.3rem;
 }
-.skill_box > div:nth-child(4) > div:after{
-    content: "Ps";
+.panel section p{
+    font-size: 1rem;
 }
-.skill_box > div:nth-child(5) > div:after{
-    content: "Ai";
+.s1{
+    background: #fff;
+    background-image: radial-gradient(#dcdbf0 20%, transparent 0), radial-gradient(#dcdbf0 20%, transparent 0);
+    background-position: 0 0, 25px 25px;
+    background-size: 50px 50px;
 }
-.skill_box > div:nth-child(6) > div:after{
-    content: "XD";
+.s2{
+    background:
+    linear-gradient(135deg, #ffe79f 25%, transparent 25%) -50px 0,
+    linear-gradient(225deg, #ffe79f 25%, transparent 25%) -50px 0,
+    linear-gradient(315deg, #ffe79f 25%, transparent 25%),
+    linear-gradient(45deg, #ffe79f 25%, transparent 25%);
+    background-size: 100px 100px;
+    background-color: #dab2f7;
 }
-.skill_box > div:hover div {
-    transform: rotateY(180deg);
-    background: #ffd966;
+.s3{
+    background:
+        radial-gradient(circle closest-side at 60% 43%, #dab2f7 26%, rgba(187,0,51,0) 27%),
+        radial-gradient(circle closest-side at 40% 43%, #dab2f7 26%, rgba(187,0,51,0) 27%),
+        radial-gradient(circle closest-side at 40% 22%, #fff 45%, rgba(221,51,85,0) 46%),
+        radial-gradient(circle closest-side at 60% 22%, #fff 45%, rgba(221,51,85,0) 46%),
+        radial-gradient(circle closest-side at 50% 35%, #fff 30%, rgba(221,51,85,0) 31%),
+
+        radial-gradient(circle closest-side at 60% 43%, #dab2f7 26%, rgba(187,0,51,0) 27%) 50px 50px,
+        radial-gradient(circle closest-side at 40% 43%, #dab2f7 26%, rgba(187,0,51,0) 27%) 50px 50px,
+        radial-gradient(circle closest-side at 40% 22%, #fff 45%, rgba(221,51,85,0) 46%) 50px 50px,
+        radial-gradient(circle closest-side at 60% 22%, #fff 45%, rgba(221,51,85,0) 46%) 50px 50px,
+        radial-gradient(circle closest-side at 50% 35%, #fff 30%, rgba(221,51,85,0) 31%) 50px 50px;
+    background-color:#dab2f7;
+    background-size:100px 100px;
 }
-.skill_box > div:hover div:after{
-    transform: rotateY(180deg);
-    color: #000;
+.s4{
+    background: radial-gradient(circle closest-side at 50px 50px, #ffc2c2 18px, transparent 0), radial-gradient(circle closest-side at 62px 50px, #ffc2c2 18px, transparent 0), radial-gradient(circle closest-side at 67px 50px, #ffc2c2 18px, transparent 0), radial-gradient(circle closest-side at 123px 150px, #ffc2c2 18px, transparent 0), radial-gradient(circle closest-side at 140px 150px, #ffc2c2 18px, transparent 0), radial-gradient(circle closest-side at 145px 150px, #ffc2c2 18px, transparent 0), radial-gradient(circle at 68px 22px, #36964C 8px, transparent 0), radial-gradient(circle at 36px 25px, #F9D9AC 20px, transparent 0), radial-gradient(circle closest-side at 81px 25px, #F9D9AC 20px, transparent 0), radial-gradient(circle at 58px 30px, #286E38 15px, transparent 0), radial-gradient(circle at 142px 120px, #36964C 8px, transparent 0), radial-gradient(circle at 110px 125px, #F9D9AC 20px, transparent 0), radial-gradient(circle closest-side at 155px 125px, #F9D9AC 20px, transparent 0), radial-gradient(circle at 132px 130px, #286E38 15px, transparent 0);
+    background-color: #F9D9AC;
+    background-size: 180px 210px;
 }
-.skill_box > div:first-child:hover div:after{
-    content: "90%";
+.s5{
+    background-color: #fff; 
+    background-image: 
+    linear-gradient(90deg, transparent 240px, #abced4 240px, #abced4 244px, transparent 244px),
+    linear-gradient(#eee .1rem, transparent .1rem);
+    background-size: 100% 2rem;
 }
-.skill_box > div:nth-child(2):hover div:after{
-    content: "90%";
+.s5 .panel section{
+    background: transparent;
 }
-.skill_box > div:nth-child(3):hover div:after{
-    content: "70%";
+.s5 .panel section h3{
+    position: relative;
 }
-.skill_box > div:nth-child(4):hover div:after{
-    content: "70%";
-}
-.skill_box > div:nth-child(5):hover div:after{
-    content: "70%";
-}
-.skill_box > div:nth-child(6):hover div:after{
-    content: "70%";
+.s5 .panel section h3::after{
+    display: inline-block;
+    content: "";
+    background: #ffef5b;
+    opacity: .3;
+    width: 6rem;
+    height: 1rem;
+    position: absolute;
+    bottom: -.2rem;
+    left: 0;   
 }
 /*section3*/
 #section3{
@@ -316,6 +429,7 @@ a {
     position: relative;
     overflow: hidden;
     justify-content: space-around;
+    background: repeating-linear-gradient(#fff, #fff 40px, #dcdbf0 0, #dcdbf0 80px);
 }
 .window-container {
     position: relative;
@@ -333,7 +447,7 @@ a {
     content: "";
     width: 100%;
     height: 100%;
-    background: #f0dbdb;
+    background: #ffdede;
     border: 2px solid #000;
     display: block;
     position: absolute;
@@ -372,7 +486,7 @@ a {
     border: 2px solid #000;
     float: right;
     margin-right:5px;
-    background: #f0dbdb;
+    background: #ffdede;
 }
 .txt_head{
     text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;
@@ -509,32 +623,28 @@ a {
 }
 /*sliding*/
 @-webkit-keyframes visual{
-    0%{
-        opacity: .4;
-    }
-    1%{
-        opacity: 1;
-    }
-    5%{
+    from{
         background-position: 0 0;
     }
-    100%{
+    to{
         background-position: 100% 100%;
     }
 }
 @keyframes visual{
-    0%{
-        opacity: .4;
-    }
-    1%{
-        opacity: 1;
-    }
-    5%{
+    from{
         background-position: 0 0;
     }
-    100%{
+    to{
         background-position: 100% 100%;
     }
+}
+/*section4*/
+
+/*section5*/
+#section5{
+    background-color: #fff;
+    background-image: linear-gradient(45deg, #e6d1f5 25%, transparent 25%, transparent 75%, #e6d1f5 75%, #e6d1f5), linear-gradient(-45deg, #e6d1f5 25%, transparent 25%, transparent 75%, #e6d1f5 75%, #e6d1f5);
+    background-size: 100px 100px;
 }
 .sns p{
     margin: 2rem 0;
@@ -574,12 +684,6 @@ a {
     #contents > div h2{
         font-size: 6vw;
         font-weight: 300;
-    }
-    .skill_box {
-        width: 80vw;
-    }
-    .skill_box > div{
-        width: 30vw;
     }
     .sns, .sns a{
         font-size: 1.6rem;
