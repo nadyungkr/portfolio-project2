@@ -127,9 +127,7 @@ a {
     margin:0 auto;
     border-radius: 30%;
     background-color: #000;
-    animation-name: scroll;
-    animation-duration: 1.6s;
-    animation-iteration-count: infinite;
+    animation: scroll 1.6s linear infinite;
 }
 .scroll-downs p{
     text-align: center;
@@ -291,18 +289,27 @@ a {
       stroke-dashoffset: 0;
     }
 }
+.fixed_post{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
 .post_7{
     width: 8vw;
     height: 8vw;
     background: #ffdede;
-    position: absolute;
+    transform: translate(80vw, 30vh);
     box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
 }
 .post_8{
     width: 8vw;
     height: 8vw;
     background: #ffdede;
-    position: absolute;
+    transform: translate(72vw, 10vh) rotate(20deg);
     box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
 }
 .post_7 img, .post_8 img{
@@ -313,7 +320,7 @@ a {
 }
 /*section2*/
 #section2{
-    min-height: 160vh;
+    min-height: 140vh;
     background:#ffdede;
     justify-content: space-around;
 }
@@ -322,7 +329,7 @@ a {
     min-height: 10vh;
     border-radius: 1rem;
     background: #fff;
-    margin: 2rem 0;
+    margin: 4rem 0;
 }
 .skill_box button{
     font-family: 'Comic Neue', cursive;
@@ -335,7 +342,7 @@ a {
     cursor: pointer;
     font-size: 3rem;
     text-align: start;
-    text-indent: 1vw;
+    text-indent: 2vw;
 }
 .skill_box .panel{
     padding: 2rem;
@@ -355,10 +362,43 @@ a {
     font-size: 1rem;
 }
 .s1{
-    background: #fff;
-    background-image: radial-gradient(#dcdbf0 20%, transparent 0), radial-gradient(#dcdbf0 20%, transparent 0);
+    background: #dcdbf0;
+    background-image: radial-gradient(#fff 20%, transparent 0), radial-gradient(#fff 20%, transparent 0);
     background-position: 0 0, 25px 25px;
     background-size: 50px 50px;
+}
+.s1 .panel .c1::after{
+    content:" 🤝";
+    animation: res 1s infinite;
+}
+@keyframes res{
+    from{
+        content: " 🤝";
+    } to {
+        content: "🤝 ";
+    }
+}
+.s1 .panel .c2::after{
+    content:" 😄";
+    animation: joyful 1s infinite;
+}
+@keyframes joyful{
+    from{
+        content:" 😄";
+    } to {
+        content:"😄 ";
+    }
+}
+.s1 .panel .c3::after{
+    content: " 💪";
+    animation: energy 1s infinite;
+}
+@keyframes energy{
+    from {
+        content: " 💪";
+    } to{
+        content: "💪 ";
+    }
 }
 .s2{
     background:
@@ -392,35 +432,35 @@ a {
 }
 .s5{
     background-color: #fff; 
-    background-image: 
-    linear-gradient(90deg, transparent 240px, #abced4 240px, #abced4 244px, transparent 244px),
-    linear-gradient(#eee .1rem, transparent .1rem);
+    background-image: linear-gradient(#eee .1rem, transparent .1rem);
     background-size: 100% 2rem;
 }
 .s5 .panel section{
     background: transparent;
 }
 .s5 .panel section h3{
-    display: inline-block;
     position: relative;
-    outline: 1px solid red;
+    display: inline-block;
 }
 .s5 .panel section h3::after{
-    display: inline-block;
+    display: block;
     content: "";
     background: #ffef5b;
     opacity: .3;
-    width: 6rem;
+    width: 100%;
     height: 1rem;
     position: absolute;
     bottom: -.2rem;
     left: 0;   
 }
-.s5 .panel section p{
-    display: inline-block;
+.s5 .panel p{
+    margin: 0 0 0 2rem;
 }
 .s5 a{
     color: #000;
+    display: block;
+    padding: .6rem;
+    width: 100%;
 }
 /*section3*/
 #section3{
