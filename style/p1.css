@@ -167,13 +167,13 @@ a {
     height: 120vh;
     justify-content: space-evenly;
     background-color: #fff;
-    background-image: linear-gradient(90deg, rgba(255, 235, 205, 0.5) 50%, transparent 50%), linear-gradient(rgba(255, 235, 205, 0.5) 50%, transparent 50%);
+    background-image: linear-gradient(90deg, rgba(255,222,222,.5) 50%, transparent 50%), 
+                    linear-gradient(rgba(255,222,222,.5) 50%, transparent 50%);
     background-size: 50px 50px;
 }
 .post_box{
     display: flex;
-    flex-flow: nowrap;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: center;
     width: 100%;
     padding: 10rem 0;
@@ -402,12 +402,13 @@ a {
 }
 .s2{
     background:
-    linear-gradient(135deg, #ffe79f 25%, transparent 25%) -50px 0,
-    linear-gradient(225deg, #ffe79f 25%, transparent 25%) -50px 0,
-    linear-gradient(315deg, #ffe79f 25%, transparent 25%),
-    linear-gradient(45deg, #ffe79f 25%, transparent 25%);
+        linear-gradient(135deg, #ffe79f 25%, transparent 25%) -50px 0,
+        linear-gradient(225deg, #ffe79f 25%, transparent 25%) -50px 0,
+        linear-gradient(315deg, #ffe79f 25%, transparent 25%),
+        linear-gradient(45deg, #ffe79f 25%, transparent 25%);
     background-size: 100px 100px;
     background-color: #dab2f7;
+
 }
 .s3{
     background:
@@ -468,13 +469,16 @@ a {
     position: relative;
     overflow: hidden;
     justify-content: space-around;
-    background: repeating-linear-gradient(#fff, #fff 40px, #dcdbf0 0, #dcdbf0 80px);
+    background-image: 
+        linear-gradient(transparent 41px, #f9d8d4 42px, transparent 12px),
+        linear-gradient(90deg, transparent 41px, #f9d8d4 42px, transparent 12px);
+    background-size: 100% 42px, 42px 100%;
 }
 .window-container {
     position: relative;
     width: 60vw;
     display: flex;
-    flex-flow: wrap;
+    flex-flow:row wrap;
     z-index: 98;
     margin-right: 15vw;
 }
@@ -678,15 +682,107 @@ a {
     }
 }
 /*section4*/
-
+#section4 {
+    background: linear-gradient(#ffffff 50%, rgba(255,255,255,0) 0) 0 0,
+                radial-gradient(circle closest-side, #FFFFFF 53%, rgba(255,255,255,0) 0) 0 0,
+                radial-gradient(circle closest-side, #FFFFFF 50%, rgba(255,255,255,0) 0) 55px 0 #f9d8d4;
+  background-size:110px 200px;
+  background-repeat:repeat-x;
+}
 /*section5*/
 #section5{
-    background-color: #fff;
-    background-image: linear-gradient(45deg, #e6d1f5 25%, transparent 25%, transparent 75%, #e6d1f5 75%, #e6d1f5), linear-gradient(-45deg, #e6d1f5 25%, transparent 25%, transparent 75%, #e6d1f5 75%, #e6d1f5);
-    background-size: 100px 100px;
+    background: radial-gradient(circle closest-side at 50px 50px, #fb8b24 3px, rgba(0, 0, 0, 0) 0%), 
+        radial-gradient(circle closest-side at 40px 60px, #fb8b24 3px, rgba(0, 0, 0, 0) 0%), 
+        radial-gradient(circle closest-side at 60px 60px, #fb8b24 3px, rgba(0, 0, 0, 0) 0%), 
+        radial-gradient(circle closest-side at 50px 70px, #fb8b24 3px, rgba(0, 0, 0, 0) 0%), 
+        radial-gradient(circle closest-side at 150px 165px, #fb8b24 3px, rgba(0, 0, 0, 0) 0%), 
+        radial-gradient(circle closest-side at 140px 175px, #fb8b24 3px, rgba(0, 0, 0, 0) 0%), 
+        radial-gradient(circle closest-side at 160px 175px, #fb8b24 3px, rgba(0, 0, 0, 0) 0%), 
+        radial-gradient(circle closest-side at 150px 185px, #fb8b24 3px, rgba(0, 0, 0, 0) 0%), 
+        radial-gradient(ellipse closest-side at 50px 60px, #f9a734 18px, rgba(0, 0, 0, 0) 0%), 
+        radial-gradient(ellipse closest-side at 150px 175px, #f9a734 18px, rgba(0, 0, 0, 0) 0%), 
+        radial-gradient(circle closest-side at 30px 40px, #f9d8d4 15px, rgba(0, 0, 0, 0) 0%), 
+        radial-gradient(circle closest-side at 40px 35px, #36964c 15px, rgba(0, 0, 0, 0) 0%), 
+        radial-gradient(circle closest-side at 70px 40px, #f9d8d4 15px, rgba(0, 0, 0, 0) 0%), 
+        radial-gradient(circle closest-side at 60px 35px, #286e38 15px, rgba(0, 0, 0, 0) 0%), 
+        radial-gradient(circle closest-side at 130px 155px, #f9d8d4 15px, rgba(0, 0, 0, 0) 0%), 
+        radial-gradient(circle closest-side at 140px 150px, #36964c 15px, rgba(0, 0, 0, 0) 0%), 
+        radial-gradient(circle at 170px 155px, #f9d8d4 15px, rgba(0, 0, 0, 0) 0%), 
+        radial-gradient(circle at 160px 150px, #286e38 15px, rgba(0, 0, 0, 0) 0%);
+    background-color: #F9D8D4;
+    background-size: 180px 210px;
+    flex-flow: row wrap;
+    justify-content: space-around;
 }
-.sns p{
-    margin: 2rem 0;
+#section5 .contactImg, #section5 .contact{
+    width: 45vw;
+}
+#section5 .contactImg{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-end;
+    align-self: flex-end;
+}
+#section5 .polaroid{
+    position: relative;
+    z-index: 96;
+    max-width: 30%;
+    max-height: 30%;
+    filter: grayscale(50%);
+    background: #fff;
+    padding: 2vw;
+    padding-bottom: 5vw;
+    box-shadow: 0 0.2rem 1.2rem rgba(0,0,0,0.2);
+    transform: scale(1);
+}
+#section5 .polaroid img{
+    max-width: 100%;
+}
+#section5 .polaroid:hover{
+    filter: none;
+    transition: all 0.35s;
+}
+#section5 .polaroid:first-child{
+    transform: rotate(-5deg);
+}
+#section5 .polaroid:first-child:hover{
+    transform: scale(1.6) rotate(0);
+    z-index: 97;
+}
+#section5 .polaroid:nth-child(2){
+    transform: rotate(15deg);
+}
+#section5 .polaroid:nth-child(2):hover{
+    transform: scale(1.6) rotate(0);
+    z-index: 97;
+}
+#section5 .polaroid:nth-child(3){
+    transform: rotate(5deg) translate(-5%, -10%);
+}
+#section5 .polaroid:nth-child(3):hover{
+    transform: scale(1.6) rotate(0) translateY(10%);
+    z-index: 97;
+}
+#section5 .polaroid:nth-child(4){
+    transform: rotate(15deg) translate(10%, -20%);
+}
+#section5 .polaroid:nth-child(4):hover{
+    transform: scale(1.6) rotate(0) translate(10%, 0%);
+    z-index: 97;
+}
+#section5 .polaroid:last-child{
+    transform: rotate(-5deg) translate(10%, -140%);
+}
+#section5 .polaroid:last-child:hover{
+    transform: scale(1.6) rotate(0) translate(10%, -90%);
+    z-index: 97;
+}
+.contact h3{
+    font-family: 'Comic Neue', cursive;
+    font-size: 5vw;
+    color: #fff;
+    text-align: center;
 }
 @media (max-width: 800px){
     #nav .menu {
@@ -724,7 +820,11 @@ a {
         font-size: 6vw;
         font-weight: 300;
     }
-    .sns, .sns a{
-        font-size: 1.6rem;
+    #section5{
+        flex-flow: column wrap;
+        justify-content: center;
+    }
+    #section5 .contactImg, #section5 .contact{
+    width: 80vw;
     }
 }
