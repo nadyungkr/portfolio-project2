@@ -784,6 +784,58 @@ a {
     color: #fff;
     text-align: center;
 }
+.contact form {
+    width: 80%;
+    margin: 2rem auto 4rem;
+    background: #f8f4e5;
+    border: 2px solid #000;
+            box-shadow: 15px 15px 0 #e6d1f5, 15px 15px 0 2px #000;
+    padding: 4rem 2rem;
+    box-sizing: border-box;
+}
+.contact label{
+    display: block;
+    color: #aaa;
+    font-family: 'Comic Neue', cursive;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+}
+.contact input, .contact textarea{
+    outline: 0;
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid #000;
+    display: block;
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: .5rem 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.2rem;
+}
+.contact textarea{
+    resize: none;
+}
+.contact input[type="text"]:focus, 
+.contact input[type="email"]:focus,
+.contact textarea:focus{
+    border-bottom: 2px solid #ffa580;
+}
+.contact .submit{
+    border: 2px solid #000;
+    background: #ffa580;
+    box-shadow: 10px 10px 0 #e6d1f5, 10px 10px 0 2px black;
+    transition: .2s all ease-in-out;
+    height: 4rem;
+    font-size: 2rem;
+    font-family: 'Comic Neue', cursive;
+    text-transform: uppercase;
+}
+
+.contact .submit:hover {
+    background: black;
+    color: white;
+}
+
 @media (max-width: 800px){
     #nav .menu {
         display: none;
