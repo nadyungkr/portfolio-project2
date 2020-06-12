@@ -721,14 +721,11 @@ a {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    align-items: flex-end;
-    align-self: flex-end;
 }
 #section5 .polaroid{
     position: relative;
     z-index: 96;
     max-width: 30%;
-    max-height: 30%;
     filter: grayscale(50%);
     background: #fff;
     padding: 2vw;
@@ -744,43 +741,38 @@ a {
     transition: all 0.35s;
 }
 #section5 .polaroid:first-child{
-    transform: rotate(-5deg);
+    position: relative;
+    transform: scale(.9) rotate(4deg);
 }
 #section5 .polaroid:first-child:hover{
-    transform: scale(1.6) rotate(0);
+    transform: scale(1.1) rotate(0);
     z-index: 97;
 }
 #section5 .polaroid:nth-child(2){
-    transform: rotate(15deg);
+    position: relative;
+    transform: scale(.9) rotate(-10deg) translateY(-10%);
 }
 #section5 .polaroid:nth-child(2):hover{
-    transform: scale(1.6) rotate(0);
     z-index: 97;
+    transform: scale(1.1) rotate(0) translateY(-10%);
 }
 #section5 .polaroid:nth-child(3){
-    transform: rotate(5deg) translate(-5%, -10%);
+    transform: scale(.9) rotate(-10deg) translateY(-10%);
 }
 #section5 .polaroid:nth-child(3):hover{
-    transform: scale(1.6) rotate(0) translateY(10%);
     z-index: 97;
-}
-#section5 .polaroid:nth-child(4){
-    transform: rotate(15deg) translate(10%, -20%);
-}
-#section5 .polaroid:nth-child(4):hover{
-    transform: scale(1.6) rotate(0) translate(10%, 0%);
-    z-index: 97;
+    transform: scale(1.1) rotate(0) translateY(-10%);
 }
 #section5 .polaroid:last-child{
-    transform: rotate(-5deg) translate(10%, -140%);
+    transform: scale(.9) rotate(10deg) translateY(-20%);
 }
 #section5 .polaroid:last-child:hover{
-    transform: scale(1.6) rotate(0) translate(10%, -90%);
     z-index: 97;
+    transform: scale(1.1) rotate(0) translateY(-20%);
 }
 .contact h3{
     font-family: 'Comic Neue', cursive;
-    font-size: 5vw;
+    font-size: 6vw;
     color: #fff;
     text-align: center;
 }
@@ -873,10 +865,14 @@ a {
         font-weight: 300;
     }
     #section5{
+        min-height: 220vh;
         flex-flow: column wrap;
         justify-content: center;
     }
     #section5 .contactImg, #section5 .contact{
-    width: 80vw;
+        width: 100%;
+    }
+    .contact form{
+        width: 80vw;
     }
 }
