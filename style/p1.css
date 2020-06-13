@@ -812,7 +812,11 @@ a {
 .contact textarea:focus{
     border-bottom: 2px solid #ffa580;
 }
-.contact .submit{
+.contact button{
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    outline: 0;
     border: 2px solid #000;
     background: #ffa580;
     box-shadow: 10px 10px 0 #e6d1f5, 10px 10px 0 2px black;
@@ -823,7 +827,7 @@ a {
     text-transform: uppercase;
 }
 
-.contact .submit:hover {
+.contact button:hover {
     background: black;
     color: white;
 }

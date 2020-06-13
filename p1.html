@@ -232,16 +232,21 @@
                 </div>
                 <div class="contact">
                     <h3>contact me</h3>
-                    <form action="" method="">
+                    <form action="https://script.google.com/macros/s/AKfycbzM9Jp4VS-2FS9tznvYgKimLqjOAlj-EstJ6MR6qQ/exec" 
+                        method="POST" class="gform" data-email="puiux.kr@gmail.com">
                         <fieldset>
                             <legend class="blind">Mail To</legend>
                             <label for="name">Name</label>
-                            <input type="text" id="name" required />
+                            <input type="text" id="name" name="name" placeholder="your name" required />
                             <label for="email">E-mail</label>
-                            <input type="email" id="email" required />
+                            <input type="email" id="email" name="email" placeholder="your.name@email.com" required />
                             <label for="textarea">Inquiry</label> 
-                            <textarea id="textarea" rows="5"></textarea>
-                            <input type="submit" class="submit" value="Submit">
+                            <textarea id="textarea" rows="5" placeholder="your message..." name="message"></textarea>
+                            <button>SUBMIT</button>
+                        </fieldset>
+                        <fieldset class="honeypot-field hidden">
+                            <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
+                            <input id="honeypot" type="text" name="honeypot" value="" />
                         </fieldset>
                     </form>
                 </div>
@@ -250,6 +255,7 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script data-cfasync="false" src="form-submission-handler.js"></script>
     <script src="p1.js"></script>
 </body>
 </html>
