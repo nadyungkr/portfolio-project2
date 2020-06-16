@@ -45,14 +45,14 @@ $(window).scroll(function(){
 
 /* toggle menu */
 $('.mNav').click(function(){
+    $(this).toggleClass('open');
     $('.menu').toggle();
 });
 
 /*skill_box*/
 var acc = document.getElementsByClassName("skill_btn");
-var i;
 
-for (i = 0; i < acc.length; i++) {
+for (var i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var panel = this.nextElementSibling;
@@ -62,6 +62,21 @@ for (i = 0; i < acc.length; i++) {
       panel.style.display = "block";
     }
   });
+}
+
+/*modal*/
+var body = document.getElementsByTagName("body")[0];
+var modal = document.getElementById("modal");
+var btn = document.getElementsByClassName("modal_btn")[0];
+var close_modal = document.getElementsByClassName("close_modal")[0];
+
+btn.onclick = function() {
+    modal.style.display = "block";
+    body.style.overflowY = "hidden";
+}
+close_modal.onclick = function() {
+    modal.style.display = "none";
+    body.style.overflowY = "scroll";
 }
 /*responsive*/
 $(window).resize(function(){
