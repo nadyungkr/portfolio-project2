@@ -1,3 +1,7 @@
+$(window).on("load",function(){
+    $(".loader-wrapper").fadeOut("slow");
+});
+
 var nav = $("nav ul li"); //메뉴 버튼
 var cont = $("#contents > .inner > div"); //컨텐츠
 
@@ -15,11 +19,6 @@ nav.click(function(e){
 $(window).scroll(function(){
     var wScroll = $(this).scrollTop();
 
-    if ( wScroll > 50 ) {
-        $("#nav").addClass("on");
-    } else if ( wScroll == 0 ) {
-        $("#nav").removeClass("on");
-    }
 // nav에 가려지는 부분 정도 값 빼주기
     if ( wScroll >= cont.eq(0).offset().top ){
         nav.removeClass("active");
