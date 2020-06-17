@@ -165,8 +165,8 @@ h1 a{
 }
 .home_text{
     width: 60vw;
-    height: 20vw;
-    line-height: 15vw;
+    height: 30vw;
+    line-height: 25vw;
     text-align: center;
     background: #ffdede;
     border: 2px solid #000;
@@ -508,6 +508,7 @@ h1 a{
 }
 /*section4*/
 #section4 {
+    min-height: 100vh;
     background: linear-gradient(#ffffff 50%, rgba(255,255,255,0) 0) 0 0,
                 radial-gradient(circle closest-side, #FFFFFF 53%, rgba(255,255,255,0) 0) 0 0,
                 radial-gradient(circle closest-side, #FFFFFF 50%, rgba(255,255,255,0) 0) 55px 0 #f9d8d4;
@@ -516,21 +517,21 @@ h1 a{
     flex-flow: row nowrap;
 }
 #section4 .app_container{
-    width: 60vw;
+    width: 50vw;
     height: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 #section4 .app_info{
-    width: 40vw;
+    width: 50vw;
     height: 100%;
 }
 .phone_content{
     width: 15vw; /*280px 기준 1vw 18px*/
     height: 28.3vw;
     border-radius: 2.5vw;
-    background: #dab2f7;
+    background: #ffa0a0;
     border: .4vw solid #fff;
     overflow: hidden;
 }
@@ -555,78 +556,25 @@ h1 a{
 .screen{
     width: 12.7vw;
     height: 20.5vw;
-    background: #e6d1f5;
+    background: url(../images/good_mood_app_1.jpg) 50% 15% no-repeat;
+    background-size: cover;
     border: .4vw solid #fff;
     box-sizing: border-box;
     box-shadow: inset 0 0 .4vw rgba(0, 0, 0, .2);
     overflow: hidden;
-    position: relative;
 }
-.screen::before{
-    position: absolute;
-    top:0;
-    left:0;
-    content: "";
-    display:block;
-    width: 10%;
-    height: 120%;
-    background: rgba(255, 255, 255, .4);
-    transform: skewX(-45deg) translateX(0);
-    animation: shot1 8s ease-in-out infinite;
-}
-.screen::after{
-    position: absolute;
-    top:0;
-    left:0;
-    content: "";
-    display: block;
-    width: 12%;
-    height: 120%;
-    background: rgba(255, 255, 255, .4);
-    transform: skewX(-45deg) translateX(120%);
-    animation: shot2 8s ease-in-out infinite;
-}
-@keyframes shot1{
-    from{
-        transform: skewX(-45deg) translateX(-150px);
-    } to {
-        transform: skewX(-45deg) translateX(0);
-    }
-}
-@keyframes shot2{
-    from{
-        transform: skewX(-45deg) translateX(-100px);
-    } to {
-        transform: skewX(-45deg) translateX(120%);
-    }
-}
-.blue, .blue .hold{
-    background: #c3c0f8;
+.blue{
+    margin-left: 2rem;
 }
 .blue .screen{
-    background: #dcdbf0;
-}
-.screen svg{
-    width: 80%;
-    height: auto;
-    display: block;
-    margin: 2rem auto 0;
-}
-.mouth{
-    animation: smile 4s ease-out infinite;
-}
-@keyframes smile {
-    from{
-        d: path("M3.1,18.3c0,0,2,0,13.2,0s12.8,0,12.8,0");
-    } to {
-        d: path("M3.1,18.3c0,0,1.8,3.7,13,3.7s13-3.7,13-3.7");
-    }
+    background: url(../images/good_mood_app_2.jpg) 50% 15% no-repeat;
+    background-size: cover;
 }
 .hold{
     width: 3.61vw;
     height: 1.38vw;
     border-radius: .5vw;
-    background: #dab2f7;
+    background: #ffa0a0;
     border: .2vw solid #fff;
     box-sizing: border-box;
 }
@@ -682,37 +630,52 @@ h1 a{
         linear-gradient(transparent 41px, #f9d8d4 42px, transparent 12px),
         linear-gradient(90deg, transparent 41px, #f9d8d4 42px, transparent 12px);
     background-size: 100% 42px, 42px 100%;
-    width: 80vw;
+    width: 60vw;
     height: 80vh;
     animation: slideIn .6s linear;
 }
 .modal_header{
+    position: relative;
+    width: 100%;
     background: #ffa0a0;
-    height: 45px;
+    height: 50px;
+    line-height: 50px;
+    z-index: 102;
 }
 .close_modal{
     float: right;
     position: relative;
     width: 50px;
-    height: 45px;
+    height: 40px;
     cursor: pointer;
 }
 .close_modal span{
     display: block;
-    width: 45px;
+    width: 40px;
     height: 6px;
     background: #fff;
     position: absolute;
 }
 .close_modal span:nth-of-type(1){
-    top: 18px;
+    top: 23px;
     left: 0;
     transform: rotate(45deg);
 }
 .close_modal span:nth-of-type(2){
-    top: 18px;
+    top: 23px;
     left: 0;
     transform: rotate(-45deg);
+}
+.modal_main{
+    position: relative;
+    z-index: 101;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+.modal_main img{
+    display: block;
+    width: 100%;
 }
 @keyframes slideIn{
     from{
@@ -953,6 +916,33 @@ h1 a{
         width: 100vw;
         height: auto;
     }
+    .phone_content{
+        width: 30vw; /*280px 기준 1vw 18px*/ /*pc*2*/
+        height: 56.6vw;
+        border-radius: 5vw;
+        border: .8vw solid #fff;
+    }
+    .glass{
+        border-radius: 4vw;
+        border: .8vw solid rgba(255,255,255, .4);
+    }
+    .camera{
+        width: 6.66vw;
+        height: .8vw;
+        border-radius: .8vw;
+    }
+    .screen{
+        width: 25.4vw;
+        height: 41vw;
+        border: .8vw solid #fff;
+        box-shadow: inset 0 0 .8vw rgba(0, 0, 0, .2);
+    }
+    .hold{
+        width: 7.22vw;
+        height: 2.76vw;
+        border-radius: 1vw;
+        border: .4vw solid #fff;
+    }
     #section4 .app_info{
         width: 100vw;
         height: auto;
@@ -962,6 +952,9 @@ h1 a{
         font-size: 10vw;
         text-shadow: 2px 2px 0 #ffa0a0,
                      4px 4px 0 #ffa0a0;
+    }
+    .app_info button{
+        margin: 5vh auto 0;
     }
     #section5{
         min-height: 220vh;
