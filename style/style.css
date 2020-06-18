@@ -157,7 +157,6 @@ h1 a{
 /*section1*/
 #section1{
     position: relative;
-    min-height: 100vh;
     background-color: #fff;
     background-image: linear-gradient(90deg, rgba(255,222,222,.5) 50%, transparent 50%), 
                       linear-gradient(rgba(255,222,222,.5) 50%, transparent 50%);
@@ -168,50 +167,45 @@ h1 a{
 }
 .card {
     width: 60vw;
-    height: 30vw;
-    line-height: 30vw;
+    height: 50vh;
+    line-height: 50vh;
     text-align: center;
     background: #ffdede;
     border: 2px solid #000;
     overflow: hidden;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: gird;
-    justify-content: center;
-    align-items: center;
-    font-size: 8vw;
+    font-size: 2rem;
     font-weight: 900;
     color: #fff;
-    box-shadow: 0 5px 10px 0 #00000040, 0 15px 20px 0 #00000020;
-    transition: transform 250ms;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    transition: all 200ms;
+    cursor: pointer;
 }
-.card:nth-last-child(n + 4){
-    --y: calc(-50% - 30px);
-    transform: translate(-50%, var(--y)) scale(0.9);
-    box-shadow: 0 0 1px 1px #00000003;
+.card:nth-child(1){
+    z-index: 3;
+    font-size: 8vw;
 }
-.card:nth-last-child(3){
-    --y: calc(-50% - 15px);
-    transform: translate(-50%, var(--y)) scale(0.95);
+.card:nth-child(2){
+    z-index: 2;
+    transform: translate(-50%, -55%) scale(0.95);
 }
-.card:nth-last-child(2){
-    --y: calc(-50%);
-    transform: translate(-50%, var(--y)) scale(1);
+.card:nth-child(3){
+    z-index: 1;
+    transform: translate(-50%, -60%) scale(0.9);
 }
-.card:nth-last-child(1){
-    --y: calc(-50% + 15px);
-    transform: translate(-50%, var(--y)) scale(1.05);
+#section1 .live{
+    z-index: 4;
+    transform: translate(-50%, -50%) scale(1);
 }
-@keyframes swap{
-    50%{
-        transform: translate(-50%, calc(var(--y) - 250px)) scale(0.85) rotate(-5deg);
-        animation-timing-function: ease-in;
-    } 100% {
-        transform: translate(-50%, calc(var(--y) - 15px)) scale(0.85);
-        z-index: -1;
-    }
+#section1 .live2{
+    z-index: 3;
+    transform: translate(-50%, -55%) scale(0.95);
+}
+#section1 .live3{
+    z-index: 2;
+    transform: translate(-50%, -60%) scale(0.9);
 }
 .portfolio span{
     display: inline-block;
@@ -280,6 +274,18 @@ h1 a{
       opacity: 1;
       font-size: 8vw;
     }
+}
+.card .clickme{
+    display: block;
+    height: 1.2rem;
+    line-height: 1;
+    position: absolute;
+    bottom: 1vw; 
+    right: 1vw;
+    font-size: 1.2rem;
+    font-weight: normal;
+    font-style: italic;
+    text-shadow: 1px 1px 0 #000;
 }
 /*section2*/
 #section2{
@@ -941,6 +947,12 @@ h1 a{
     }
     #nav ul.menu li.active a:after{
         width: 0;
+    }
+    .card{
+        width: 80vw;
+        height: 60vh;
+        line-height: 60vh;
+        font-size: 1.2rem;
     }
     .txt_head{  
         font-size: 5.8rem;
