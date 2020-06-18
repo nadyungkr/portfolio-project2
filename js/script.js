@@ -48,6 +48,8 @@ $('.mNav').click(function(){
     $('.menu').toggle();
 });
 
+/*card_stack*/
+
 /*skill_box*/
 var acc = document.getElementsByClassName("skill_btn");
 
