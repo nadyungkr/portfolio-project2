@@ -53,7 +53,7 @@ $(document).ready(function(){
     var card = $('.card');
     var currentItem = card.filter('.live');
 
-    card.click(function(){
+    card.click(function cardStack(){
         var nextItem = currentItem.next();
         var contentFirst = card.first();
         var lastItem = card.last();
@@ -78,10 +78,10 @@ $(document).ready(function(){
             currentItem = nextItem.addClass('live');
             contentFirst.removeClass('live3');
             contentFirst.addClass('live2');
-
         }
     });
 });
+
 /*skill_box*/
 var acc = document.getElementsByClassName("skill_btn");
 
