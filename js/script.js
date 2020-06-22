@@ -1,5 +1,37 @@
-$(window).on("load",function(){
+/*card_stack*/
+$(document).ready(function(){
     $(".loader-wrapper").fadeOut("slow");
+    
+    var card = $('.card');
+    var currentItem = card.filter('.live');
+
+    card.click(function cardStack(){
+        var nextItem = currentItem.next();
+        var contentFirst = card.first();
+        var lastItem = card.last();
+        
+        currentItem.removeClass('live');
+        currentItem.addClass('live3');
+
+        if (currentItem.is(lastItem)) {
+            contentFirst.removeClass('live2');
+            currentItem = contentFirst.addClass('live');
+            contentFirst.next().removeClass('live3');
+            contentFirst.next().addClass('live2');
+
+        } else if (currentItem.is(contentFirst)) {
+            currentItem = nextItem.addClass('live');
+            currentItem = nextItem.removeClass('live2');
+            currentItem.next().addClass('live2');
+            currentItem.next().removeClass('live3');
+          
+        } else {
+            currentItem = nextItem.removeClass('live2');
+            currentItem = nextItem.addClass('live');
+            contentFirst.removeClass('live3');
+            contentFirst.addClass('live2');
+        }
+    });
 });
 
 var nav = $("nav ul li"); //메뉴 버튼
@@ -46,40 +78,6 @@ $(window).scroll(function(){
 $('.mNav').click(function(){
     $(this).toggleClass('open');
     $('.menu').toggle();
-});
-
-/*card_stack*/
-$(document).ready(function(){
-    var card = $('.card');
-    var currentItem = card.filter('.live');
-
-    card.click(function cardStack(){
-        var nextItem = currentItem.next();
-        var contentFirst = card.first();
-        var lastItem = card.last();
-        
-        currentItem.removeClass('live');
-        currentItem.addClass('live3');
-
-        if (currentItem.is(lastItem)) {
-            contentFirst.removeClass('live2');
-            currentItem = contentFirst.addClass('live');
-            contentFirst.next().removeClass('live3');
-            contentFirst.next().addClass('live2');
-
-        } else if (currentItem.is(contentFirst)) {
-            currentItem = nextItem.addClass('live');
-            currentItem = nextItem.removeClass('live2');
-            currentItem.next().addClass('live2');
-            currentItem.next().removeClass('live3');
-          
-        } else {
-            currentItem = nextItem.removeClass('live2');
-            currentItem = nextItem.addClass('live');
-            contentFirst.removeClass('live3');
-            contentFirst.addClass('live2');
-        }
-    });
 });
 
 /*skill_box*/
