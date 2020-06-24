@@ -12,6 +12,11 @@ li{
 a {
     text-decoration: none;
 }
+footer{
+    background: #F9D8D4;
+    text-align: center;
+    padding: 2rem 0;
+}
 /*loader*/
 .loader-wrapper{
     width: 100%;
